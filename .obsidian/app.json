@@ -1,0 +1,11 @@
+{
+  "interfaceFontSize": 14,
+  "useMarkdownLinks": true,
+  "showFrontmatter": true,
+  "defaultViewMode": "preview",
+  "foldHeading": true,
+  "foldIndent": true,
+  "newFileLocation": "root",
+  "attachmentFolderPath": "_attachments",
+  "alwaysUpdateLinks": true
+}
