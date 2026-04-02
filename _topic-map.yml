@@ -1,0 +1,103 @@
+# Topic Tag -> Folder Mapping
+# Maps bot-generated topic/* tags to broad folders.
+# First matching topic tag in a file's frontmatter determines folder.
+# Tags not listed here fall back to "misc/".
+
+ai-agents:
+  - ai-agents
+  - ai-orchestration
+  - ai-architecture
+  - model-context-protocol
+  - knowledge-graphs
+  - llm-agents
+  - autonomous-agents
+  - llm-orchestration
+  - memory-management
+
+ai-coding:
+  - ai-coding
+  - ai-coding-assistants
+  - claude-ai
+  - claude-code
+  - ai-development
+  - ai-development-tools
+  - ai-prompting
+  - prompt-engineering
+  - llm-prompt-engineering
+  - ai-optimization
+  - token-optimization
+  - token-management
+
+ai-media:
+  - ai-music-production
+  - ai-video-editing
+  - ai-course-creation
+  - vocal-synthesis
+  - video-production
+  - online-education
+
+ai-research:
+  - large-language-models
+  - ai-risk
+  - machine-learning
+  - reinforcement-learning
+  - deep-learning-optimization
+  - model-pruning
+  - computational-efficiency
+
+tools:
+  - cli-tools
+  - cli-utilities
+  - ai-productivity-tools
+  - ai-productivity
+  - notebooklm
+  - product-management
+  - terminal-ui
+  - terminal-browsing
+  - terminal-applications
+  - browser-automation
+  - developer-tools
+  - development-tools
+  - open-source-tools
+
+web-dev:
+  - ai-web-development
+  - ui-engineering
+  - web-development
+  - web-design
+  - front-end-development
+  - frontend-development
+  - web-performance
+  - vercel-sandboxes
+  - serverless
+  - cloudflare-api
+  - cloudflare-workers
+  - cloudflare
+  - cloud-development
+  - cloud-infrastructure
+  - typescript
+  - javascript-library
+
+creative:
+  - pixel-art
+  - retro-art
+  - image-processing
+  - ai-image-generation
+  - shaders
+  - visual-effects
+  - graphic-design-tools
+  - design-tools
+  - retro-graphics
+  - web-gpu
+  - dithering-software
+
+security:
+  - cybersecurity
+  - phishing-attacks
+  - social-engineering
+  - proxy-security
+
+crypto:
+  - bitcoin
+  - decentralized-finance
+  - blockchain-protocols

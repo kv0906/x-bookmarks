@@ -5,11 +5,15 @@ description: Move unorganized bookmark files from repo root into topic-based fol
 
 # Organize Bookmarks
 
-Move unorganized X bookmark files from the repo root into topic-based folders based on their frontmatter tags.
+Move unorganized X bookmark files from the repo root into topic-based folders using the topic map.
 
 ## Instructions
 
-### 1. Find Unorganized Bookmarks
+### 1. Load the Topic Map
+
+Read `_topic-map.yml` from the repo root. This file maps broad folder names to lists of topic tag slugs. Build a lookup: for each tag slug, know which folder it maps to.
+
+### 2. Find Unorganized Bookmarks
 
 Use Glob to find markdown files in the repo root matching the bookmark naming pattern:
 - Pattern: `[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*.md` in `/Users/van/projects/x-bookmarks/`
@@ -18,26 +22,29 @@ Use Glob to find markdown files in the repo root matching the bookmark naming pa
 
 If no matching files are found, report "All bookmarks are already organized." and stop.
 
-### 2. For Each Unorganized File
+### 3. For Each Unorganized File
 
 Read the file's YAML frontmatter and extract:
 - The `tags` array
-- Find the **first** tag starting with `topic/` (e.g., `topic/ai-agents`)
-- Strip the `topic/` prefix to get the folder name (e.g., `ai-agents`)
+- Find **all** tags starting with `topic/` (e.g., `topic/ai-agents`)
+- Strip the `topic/` prefix to get tag slugs (e.g., `ai-agents`)
 
-If no `topic/*` tag is found, use `uncategorized` as the folder name.
+Determine the destination folder:
+1. For each topic tag slug (in order), look it up in the topic map
+2. Use the **first matching** folder from the map
+3. If no tag matches the map, use `misc/` as the folder name
 
-### 3. Move the File
+### 4. Move the File
 
 For each file, run:
 
 ```bash
-mkdir -p <topic-folder> && mv <filename> <topic-folder>/
+mkdir -p <folder> && mv <filename> <folder>/
 ```
 
 **Important**: Before moving, check if the destination file already exists. If it does, skip and note "already exists, skipped".
 
-### 4. Report Results
+### 5. Report Results
 
 After processing all files, output a summary table:
 
@@ -45,15 +52,21 @@ After processing all files, output a summary table:
 Organized N bookmark(s):
 
   filename-a.md -> ai-agents/
-  filename-b.md -> cloudflare/
+  filename-b.md -> web-dev/
 
-Topic folders: ai-agents, cloudflare
+Topic folders: ai-agents, web-dev
+```
+
+If any tags were not found in the topic map, list them so the user can update `_topic-map.yml`:
+
+```
+Unmapped tags (went to misc/): some-new-tag, another-tag
 ```
 
 ## Rules
 
 - Only move files matching the date-slug pattern from root. Never touch files already in subdirectories.
 - Never modify file contents — only move them.
-- The primary topic is always the FIRST `topic/*` tag in the frontmatter tags array.
+- Always use `_topic-map.yml` to determine folders — never use raw topic tags as folder names.
 - Create folders on demand. Never pre-create empty folders.
 - This command is idempotent — safe to run multiple times.
