@@ -122,7 +122,7 @@ qmd query "best practices for prompt engineering" -c xbm --json -n 10
 qmd get "wiki/concepts/mcp.md" --full
 
 # After adding/updating files, refresh the index
-qmd collection sync xbm && qmd embed
+qmd update && qmd embed
 ```
 
 ### Operations

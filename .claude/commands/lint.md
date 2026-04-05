@@ -36,7 +36,7 @@ Run these checks and collect findings:
 
 **Missing cross-references** — wiki pages that should link to each other based on topic overlap but don't.
 
-**qmd index stale** — check if the qmd collection file count matches actual file count. If out of sync, recommend running `qmd collection sync xbm && qmd embed`.
+**qmd index stale** — check if the qmd collection file count matches actual file count. If out of sync, recommend running `qmd update && qmd embed`.
 
 ### 3. Generate Report
 

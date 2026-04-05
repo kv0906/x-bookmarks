@@ -154,7 +154,7 @@ Append to `log.md`:
 After writing wiki pages, refresh the qmd search index so new pages are searchable:
 
 ```bash
-qmd collection sync xbm
+qmd update
 qmd embed
 ```
 
