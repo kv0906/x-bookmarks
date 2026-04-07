@@ -47,6 +47,45 @@ Each file has YAML frontmatter with:
 - Delete junk bookmarks: unresolvable t.co links, empty/broken content, `[object Object]` placeholders with no real summary
 - Remove empty topic folders after deleting their last file
 
+## Quality Gate (junk filter)
+
+The X bookmark bot sometimes produces broken or low-value files (scrape failures, hallucinated summaries, noise retweets). Every bookmark that enters the vault MUST pass the quality gate below. `/organize`, `/compile`, and `/lint` all enforce this — they quarantine failing files to `_trash/` (never silently keep them, never hard-delete without the user seeing them first).
+
+### Reject criteria (any one → quarantine)
+
+1. **Broken content**
+   - Summary section empty, missing, or under ~200 chars of substance
+   - Contains literal `[object Object]`, `undefined`, `null`, `{{...}}`, or other placeholder artifacts
+   - Linked Content section is only a bare `t.co/...` URL with no resolved text
+   - Frontmatter missing required fields (`author`, `tweet_url`, `tags`, `created`)
+   - No `topic/*` tag at all
+2. **Zero-value content**
+   - Pure motivational / inspirational one-liner with no tool, framework, technique, or concrete insight
+   - Generic "I used X and it was great" with no specifics (no repo, no workflow, no reproducible takeaway)
+   - Screenshot-only posts where the summary doesn't capture what the screenshot showed
+   - Promotional / giveaway / engagement-bait tweets
+3. **Duplicates**
+   - Same `tweet_id` as an existing file
+   - Near-identical summary to an existing bookmark by the same author within 7 days (likely re-bookmark)
+
+### Keep criteria (do NOT reject for)
+
+- Uncompiled status — uncompiled ≠ junk
+- Topic not yet in `_topic-map.yml` — goes to `misc/`, still valuable
+- Opinion / essay content with substantive argument — keep
+- Short content IF it captures a specific tool name, repo, or technique
+
+### Quarantine workflow
+
+- Move failing files to `_trash/YYYY-MM-DD-slug.md` (create folder on demand; it is gitignored-candidate but currently tracked so the user can audit)
+- Append one line per quarantined file to `log.md` under the operation entry: `quarantine: <path> — <reason>`
+- Never modify the file contents — only move
+- The user periodically empties `_trash/` after review
+
+### When in doubt
+
+Prefer keep over quarantine. The gate exists to stop obvious noise, not to gatekeep judgment calls. If a file is borderline, leave it in its topic folder and let `/lint` flag it later.
+
 ## Second Brain / Wiki Layer
 
 This vault follows the [LLM Wiki pattern](https://x.com/karpathy): bookmarks are the raw source of truth, and the LLM maintains a compiled wiki on top.

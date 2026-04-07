@@ -22,7 +22,17 @@ Use Glob to find markdown files in the repo root matching the bookmark naming pa
 
 If no matching files are found, report "All bookmarks are already organized." and stop.
 
-### 3. For Each Unorganized File
+### 2b. Apply the Quality Gate (BEFORE topic routing)
+
+For every candidate file, apply the Quality Gate defined in `CLAUDE.md` → "Quality Gate (junk filter)". Read the file's full content (frontmatter + body) and check all reject criteria: broken content, zero-value content, duplicates (same `tweet_id` as an existing file anywhere in the vault).
+
+For each file that fails the gate:
+- `mkdir -p _trash && mv <filename> _trash/`
+- Record the filename and one-line reason for the report
+
+Files that pass the gate continue to step 3. When in doubt, prefer keep over quarantine.
+
+### 3. For Each Unorganized File (that passed the gate)
 
 Read the file's YAML frontmatter and extract:
 - The `tags` array
@@ -55,6 +65,14 @@ Organized N bookmark(s):
   filename-b.md -> web-dev/
 
 Topic folders: ai-agents, web-dev
+```
+
+Also report quarantined files (if any):
+
+```
+Quarantined N file(s) to _trash/:
+  filename-x.md — empty summary / [object Object]
+  filename-y.md — bare t.co link, no resolved content
 ```
 
 If any tags were not found in the topic map, list them so the user can update `_topic-map.yml`:

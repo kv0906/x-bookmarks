@@ -3,6 +3,8 @@ allowed-tools: Bash, Read, Write, Edit, Glob, Grep
 description: Health check the wiki for gaps, contradictions, and orphans
 ---
 
+**Also enforce the Quality Gate** from `CLAUDE.md` → "Quality Gate (junk filter)". Scan every bookmark across all topic folders for reject criteria (broken content, zero-value, duplicates). Report any failures as a "Quality Gate Violations" section in the lint report and recommend quarantining them to `_trash/`. Do NOT auto-move — lint is read-only.
+
 # Lint Wiki
 
 Run a health check on the wiki to find issues and suggest improvements.

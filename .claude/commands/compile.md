@@ -3,6 +3,8 @@ allowed-tools: Bash, Read, Write, Edit, Glob, Grep
 description: Build/update the wiki from all bookmarks (incremental)
 ---
 
+**Before compiling**, apply the Quality Gate from `CLAUDE.md` → "Quality Gate (junk filter)" to any bookmark not yet in a wiki page's `sources:` list. Quarantine failures to `_trash/` with a log entry. Skip quarantined files — never compile them into the wiki.
+
 # Compile Wiki
 
 Read all bookmarks and compile/update the wiki layer with concept pages, comparisons, author profiles, synthesis articles, and an index.
