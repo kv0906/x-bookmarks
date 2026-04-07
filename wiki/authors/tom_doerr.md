@@ -11,13 +11,15 @@ sources:
   - tools/2026-03-24-unofficial-python-api-agent-skills-for-google-notebooklm.md
   - tools/2026-03-26-openoats-local-ai-meeting-note-taker-with-real-time-transcri.md
   - tools/2026-03-27-termcraft-build-animated-terminal-uis-with-drag-drop.md
+  - ai-agents/2026-04-05-autonomous-ai-sports-article-writer-using-deepseek-and-llm-j.md
+  - ai-agents/2026-04-05-persistent-memory-for-ai-coding-agents-via-knowledge-graphs-.md
 created: 2026-04-05
-modified: 2026-04-05
+modified: 2026-04-07
 ---
 
 # @tom_doerr
 
-The most bookmarked author in the collection (10 bookmarks). Prolific curator and builder in the AI developer tools space — consistently surfaces high-quality open-source projects, Claude Code ecosystem tools, and developer productivity utilities. Acts as a signal filter for the AI coding community.
+The most bookmarked author in the collection (12 bookmarks). Prolific curator and builder in the AI developer tools space — consistently surfaces high-quality open-source projects, Claude Code ecosystem tools, and developer productivity utilities. Acts as a signal filter for the AI coding community.
 
 ## Bookmarked Content
 - [[ai-agents/2026-03-25-typescript-sdk-for-model-context-protocol-for-llm-integratio]] — MCP TypeScript SDK
@@ -30,3 +32,5 @@ The most bookmarked author in the collection (10 bookmarks). Prolific curator an
 - [[tools/2026-03-24-unofficial-python-api-agent-skills-for-google-notebooklm]] — NotebookLM Python API
 - [[tools/2026-03-26-openoats-local-ai-meeting-note-taker-with-real-time-transcri]] — OpenOats meeting transcription
 - [[tools/2026-03-27-termcraft-build-animated-terminal-uis-with-drag-drop]] — Termcraft terminal UI builder
+- [[ai-agents/2026-04-05-autonomous-ai-sports-article-writer-using-deepseek-and-llm-j]] — SportsWriter DeepSeek + LLM-judge pipeline
+- [[ai-agents/2026-04-05-persistent-memory-for-ai-coding-agents-via-knowledge-graphs-]] — agentmemory persistent memory framework

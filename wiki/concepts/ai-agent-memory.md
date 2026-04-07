@@ -5,8 +5,9 @@ sources:
   - ai-agents/2026-03-27-mem0-universal-memory-layer-for-ai-agents.md
   - ai-coding/2026-03-28-dynamic-ai-knowledge-system-with-adaptive-prompting.md
   - ai-coding/2026-03-28-dynamic-claude-instructions-building-a-self-evolving-ai-know.md
+  - ai-agents/2026-04-05-persistent-memory-for-ai-coding-agents-via-knowledge-graphs-.md
 created: 2026-04-05
-modified: 2026-04-05
+modified: 2026-04-07
 ---
 
 # AI Agent Memory
@@ -19,6 +20,7 @@ How AI agents persist, retrieve, and evolve knowledge across conversations. This
 - **Self-evolving knowledge systems** use a hypothesis-to-rule promotion cycle: review rules before tasks → test hypotheses during work → promote confirmed ones → demote broken rules, organized in domain-specific folders
 - **Key design principle**: memory should be an index (pointers to where information lives), not a storage dump — this prevents context pollution and keeps retrieval fast
 - **Write discipline** matters as much as read: only save non-obvious insights, avoid duplicating what's in the codebase, and actively prune stale memories
+- **agentmemory** (rohitg00) tackles the "amnesia problem" with triple-stream retrieval (BM25 keyword + vector + knowledge graph), 4-tier memory consolidation, provenance-tracked citations, and cascading staleness to stop stale info from polluting context — cross-agent by design
 
 ## Related
 - [[claude-code]] — reference implementation of structured memory
@@ -31,3 +33,4 @@ How AI agents persist, retrieve, and evolve knowledge across conversations. This
 - [[ai-agents/2026-03-27-mem0-universal-memory-layer-for-ai-agents]] — universal memory layer service
 - [[ai-coding/2026-03-28-dynamic-ai-knowledge-system-with-adaptive-prompting]] — hypothesis-to-rule promotion
 - [[ai-coding/2026-03-28-dynamic-claude-instructions-building-a-self-evolving-ai-know]] — compounding CLAUDE.md approach
+- [[ai-agents/2026-04-05-persistent-memory-for-ai-coding-agents-via-knowledge-graphs-]] — agentmemory hybrid retrieval framework

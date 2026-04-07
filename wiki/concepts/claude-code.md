@@ -11,8 +11,10 @@ sources:
   - tools/2026-03-27-claude-ai-for-rapid-project-output.md
   - web-dev/2026-03-27-ai-powered-pixel-perfect-website-reverse-engineering-templat.md
   - ai-media/2026-03-27-buttercut-ai-video-editing-for-final-cut-premiere-resolve.md
+  - tools/2026-04-06-visual-explainer-enhanced-diagram-and-code-review-for-agents.md
+  - ai-agents/2026-04-06-graphify-llm-powered-knowledge-graph-tool-for-codebases-and-.md
 created: 2026-04-05
-modified: 2026-04-05
+modified: 2026-04-07
 ---
 
 # Claude Code
@@ -25,6 +27,7 @@ Anthropic's agentic coding tool that operates across entire repositories, with a
 - **Token optimization** is a major concern — multiple approaches exist to cut usage 60-90% (see [[comparisons/token-optimization-tools]])
 - **Skills ecosystem** includes "Turbo" (60+ modular skills), oh-my-mermaid (architecture docs), and community-curated awesome lists
 - **Beyond coding** — used for video editing (ButterCut), website reverse engineering, and rapid project output across domains
+- **Installable agent skills** are becoming a first-class extension point: `visual-explainer` replaces ASCII diagrams with interactive HTML, `graphify` turns any folder into a queryable knowledge graph — both installed as Claude Code skills (see [[agent-skills]])
 
 ## Related
 - [[mcp]] — Claude Code is a primary MCP client
@@ -44,3 +47,5 @@ Anthropic's agentic coding tool that operates across entire repositories, with a
 - [[tools/2026-03-27-claude-ai-for-rapid-project-output]] — project output workflows
 - [[web-dev/2026-03-27-ai-powered-pixel-perfect-website-reverse-engineering-templat]] — website cloning template
 - [[ai-media/2026-03-27-buttercut-ai-video-editing-for-final-cut-premiere-resolve]] — ButterCut video editing
+- [[tools/2026-04-06-visual-explainer-enhanced-diagram-and-code-review-for-agents]] — visual-explainer skill
+- [[ai-agents/2026-04-06-graphify-llm-powered-knowledge-graph-tool-for-codebases-and-]] — Graphify skill for codebase knowledge graphs
