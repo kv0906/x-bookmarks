@@ -24,6 +24,7 @@ Last updated: 2026-04-12
 - [[concepts/fireworks-tech-graph]] — Claude Code skill for generating technical architecture diagrams from natural language
 - [[concepts/langserve]] — LangChain deployment framework for turning chains/agents into REST APIs
 - [[concepts/llm-pruning]] — Layer removal in LLMs: up to 50% of deeper layers are redundant
+- [[concepts/llm-inference]] — LLM inference fundamentals: GPU vs CPU, VRAM, quantization, trade-offs
 
 ## Comparisons
 - [[comparisons/token-optimization-tools]] — RTK vs workflow optimization vs Code Mode vs Markdown for Agents
