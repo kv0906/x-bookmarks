@@ -24,7 +24,12 @@ Last updated: 2026-04-12
 - [[concepts/fireworks-tech-graph]] — Claude Code skill for generating technical architecture diagrams from natural language
 - [[concepts/langserve]] — LangChain deployment framework for turning chains/agents into REST APIs
 - [[concepts/llm-pruning]] — Layer removal in LLMs: up to 50% of deeper layers are redundant
-- [[concepts/llm-inference]] — LLM inference fundamentals: GPU vs CPU, VRAM, quantization, trade-offs
+- [[concepts/llm-inference]] — LLM inference fundamentals: GPU vs CPU, VRAM, quantization, matrix multiplication, prefill/decode pipeline
+- [[concepts/rag]] — Retrieval-Augmented Generation: embedding, chunking, vector search, and the full retrieval pipeline
+- [[concepts/attention-mechanism]] — Core Transformer innovation: parallel token-pair attention scoring and Q/K/V projections
+- [[concepts/kv-cache]] — Key-Value Cache: inference short-term memory that avoids recomputing attention across decode steps
+- [[concepts/scaling-laws]] — Power-law relationships between parameters, data, compute, and model performance
+- [[concepts/embedding]] — Text-to-vector representations powering both LLM internals and RAG retrieval
 
 ## Comparisons
 - [[comparisons/token-optimization-tools]] — RTK vs workflow optimization vs Code Mode vs Markdown for Agents
@@ -46,3 +51,4 @@ Last updated: 2026-04-12
 - [[synthesis/agent-infrastructure-stack]] — The emerging stack: execution → protocol → memory → orchestration (updated April 2026)
 - [[synthesis/terminal-renaissance]] — CLI tools revival driven by AI agent demand
 - [[synthesis/context-engineering-personal-ai-os]] — From RAG to context engineering and the Personal AI OS movement
+- [[synthesis/llm-foundations-pm-guide]] — The AI Product Manager's first-principles guide: 13 notes mapping LLM architecture, inference, scaling, and RAG

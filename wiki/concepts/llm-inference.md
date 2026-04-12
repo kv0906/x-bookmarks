@@ -1,17 +1,24 @@
 ---
 type: concept
-sources: []
+sources:
+  - ai-research/2026-04-12-llm-foundations-first-principles.md
+  - ai-research/2026-04-12-gpu-in-llm-inference.md
+  - ai-research/2026-04-12-matrix-multiplication-in-llms.md
+  - ai-research/2026-04-12-kv-cache-first-principles.md
+  - ai-research/2026-04-12-math-concepts-for-llms-generalist.md
 created: 2026-04-12
 modified: 2026-04-12
 ---
 
 # LLM Inference & Các Khái Niệm Cơ Bản
 
-## 1. Inference là gì?
-**Inference** = quá trình **suy luận** của mô hình AI để đưa ra câu trả lời.
+Inference is the process of using a trained model to generate output — everything that happens after training, when a user sends a prompt and receives a response. It's the production runtime of every AI product.
 
-- Không phải huấn luyện (training), mà là **dùng mô hình đã học** để sinh nội dung.
-- Ví dụ: Bạn hỏi "Thời tiết hôm nay thế nào?", mô hình suy luận và trả lời → đó là inference.
+## 1. Inference Pipeline
+
+Two-phase process:
+1. **Prefill**: process the entire prompt in parallel (fast, compute-bound)
+2. **Decode**: generate tokens one at a time autoregressively (slow, memory-bound) — this is where [[kv-cache]] is critical
 
 ## 2. CPU Inference vs GPU Inference
 
@@ -23,53 +30,56 @@ modified: 2026-04-12
 | Ưu điểm            | Rẻ, dễ chạy                    | Siêu nhanh, mượt mà                    |
 | Nhược điểm         | Chờ lâu mỗi câu                | Đắt, VRAM hạn chế                      |
 
-**Kết luận**: Muốn inference nhanh → **nên dùng GPU**. CPU vẫn chạy được nhưng sẽ chậm hơn nhiều.
+**Why GPU wins**: LLM inference is almost entirely matrix multiplication. GPUs have thousands of cores that perform these multiplications in parallel; CPUs have only a few dozen cores and must process sequentially.
 
-## 3. VRAM là gì?
-- VRAM = **bộ nhớ riêng** của card đồ họa (GPU).
-- Khác với RAM hệ thống: VRAM nằm ngay trên GPU nên **truy cập rất nhanh**.
-- Khi chạy LLM, model weights + KV Cache đều cần nằm trong VRAM.
-- Nếu không đủ VRAM → phải offload sang RAM → tốc độ giảm mạnh.
+## 3. VRAM — The Primary Bottleneck
 
-## 4. Tại sao GPU (dùng cho đồ họa) lại chạy được AI?
-GPU có **hàng nghìn lõi nhỏ** làm việc **song song** cùng lúc.
-LLM cần rất nhiều phép tính giống nhau (nhân ma trận).
-GPU làm những phép tính đó **cùng một lúc** → nhanh gấp nhiều lần CPU (CPU chỉ làm lần lượt).
+- VRAM = GPU's dedicated memory, sitting on the GPU die for fast access
+- Two consumers: **model weights** (fixed) + **KV Cache** (grows with context length)
+- Insufficient VRAM forces offloading to system RAM → massive speed penalty
+- Example: Llama 3.1 8B at FP16 needs ~16 GB just for weights, before any KV Cache
 
-## 5. Tại sao LLM ngốn nhiều RAM/VRAM?
-LLM ngốn bộ nhớ vì 2 phần chính:
-1. **Model weights** (trọng số): hàng tỷ con số → chiếm phần lớn bộ nhớ.
-2. **KV Cache**: bộ nhớ tạm lưu context (càng dài context → càng ngốn nhiều).
+## 4. Matrix Multiplication — The Core Operation
 
-Ví dụ: Model 8B gốc cần ~16 GB chỉ để weights.
+Every computation in an LLM (embedding lookup, attention scoring, feed-forward layers, output prediction) is matrix multiplication. This single operation accounts for the vast majority of inference time and is why hardware choice matters so much.
 
-## 6. Quantization là gì?
-**Quantization** = **làm tròn** các con số trong mô hình để model **nhỏ và nhẹ hơn**.
+## 5. Quantization
 
-**Ví dụ thực tế (Llama 3.1 8B)**:
-- Bản gốc (FP16): ~16 GB
-- Sau quantize Q4_K_M: chỉ còn ~4.5 GB
-- Vẫn chạy được trên máy 8 GB VRAM, chat nhanh hơn, chất lượng gần như không khác.
+**Quantization** = reducing numerical precision of model weights to shrink model size and speed up inference.
 
-Lợi ích:
-- Model nhỏ hơn 4–8 lần
-- Chạy nhanh hơn
-- Dùng ít RAM/VRAM hơn
+| Mức quant | Dung lượng giảm | Tốc độ | Chất lượng | Khuyến nghị cho PM |
+|-----------|------------------|--------|------------|---------------------|
+| Q4_K_M    | ~4× nhỏ hơn     | Rất nhanh | Tốt       | Phù hợp sản phẩm user-facing |
+| Q5_K_M    | ~3× nhỏ hơn     | Nhanh     | Rất tốt   | Balance tốt nhất |
+| FP16      | Gốc              | Chậm      | Tốt nhất  | Chỉ dùng cho backend cao cấp |
 
-## 7. Trade-off là gì?
-**Trade-off** = **sự đánh đổi**: Bạn được cái này thì phải chấp nhận kém cái kia.
+Example: Llama 3.1 8B goes from ~16 GB (FP16) to ~4.5 GB (Q4_K_M) — runnable on 8 GB VRAM with minimal quality loss.
 
-**Ví dụ trong Quantization**:
-- Được: model nhỏ + nhanh + chạy trên máy yếu
-- Mất: chất lượng câu trả lời giảm **một chút** (model đôi khi kém thông minh hơn, hay lặp từ, hiểu sai).
+## 6. The PM Trade-off Triangle
 
-**Mức khuyến nghị phổ biến**: Q4_K_M hoặc Q5_K_M (đánh đổi rất nhỏ, đáng dùng).
+```
+        Quality
+         /\
+        /  \
+       /    \
+      /______\
+   Speed    Cost
+```
 
-## Ghi chú
-- Muốn nhanh → GPU + quantize vừa đủ
-- Muốn model lớn trên máy yếu → quantize mạnh + CPU/RAM lớn
-- Trade-off luôn tồn tại: nhỏ + nhanh ↔ chất lượng cao
+Every inference decision sits on this triangle. Quantization trades quality for speed+cost. Bigger models trade cost for quality. GPU trades cost for speed. The PM's job is choosing the right point for the product.
 
 ## Related
-- [[llm-pruning]] — layer removal is another model size reduction technique
+- [[kv-cache]] — the cache that makes autoregressive decoding feasible
+- [[attention-mechanism]] — the most compute-intensive inference operation
+- [[scaling-laws]] — why bigger models need more inference resources
+- [[embedding]] — the first inference step: tokens → vectors
+- [[rag]] — adds a retrieval step before inference
+- [[llm-pruning]] — layer removal as model size reduction technique
 - [[token-optimization]] — reducing token count complements hardware-level optimizations
+
+## Sources
+- [[ai-research/2026-04-12-llm-foundations-first-principles]] — inference pipeline (prefill/decode), quantization table, PM trade-offs
+- [[ai-research/2026-04-12-gpu-in-llm-inference]] — GPU vs CPU throughput, VRAM bottleneck, parallel computation
+- [[ai-research/2026-04-12-matrix-multiplication-in-llms]] — matrix mult as the core LLM operation, GPU advantage
+- [[ai-research/2026-04-12-kv-cache-first-principles]] — KV Cache as inference memory optimization
+- [[ai-research/2026-04-12-math-concepts-for-llms-generalist]] — linear algebra and probability as inference foundations
