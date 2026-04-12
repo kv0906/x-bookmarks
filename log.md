@@ -41,6 +41,11 @@
 - All 72 bookmarks in the vault are now compiled into at least one wiki page
 - INDEX.md updated with 23 concepts, 3 comparisons, 8 authors, 4 synthesis articles
 
+## [2026-04-12] cleanup | Removed crypto-tokenization and aitm-phishing concept pages per user request
+- Deleted wiki/concepts/crypto-tokenization.md (sources: crypto/tbdex, crypto/chainlink, misc/defi-security-checklist)
+- Deleted wiki/concepts/aitm-phishing.md (source: security/aitm-phishing)
+- Updated INDEX.md — now 21 concepts
+
 ## [2026-04-07] cleanup | fixed 2 wikilinks, deleted 3 junk bookmarks
 - unbracketed [[graphify]] in wiki/concepts/llm-wiki.md
 - unbracketed [[visual-explainer]] in wiki/concepts/agent-skills.md

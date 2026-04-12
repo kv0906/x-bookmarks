@@ -24,8 +24,6 @@ Last updated: 2026-04-12
 - [[concepts/fireworks-tech-graph]] — Claude Code skill for generating technical architecture diagrams from natural language
 - [[concepts/langserve]] — LangChain deployment framework for turning chains/agents into REST APIs
 - [[concepts/llm-pruning]] — Layer removal in LLMs: up to 50% of deeper layers are redundant
-- [[concepts/crypto-tokenization]] — Blockchain tokenization of financial markets (tbDEX, Chainlink) and DeFi security
-- [[concepts/aitm-phishing]] — Adversary-in-the-Middle credential phishing via URL shorteners
 
 ## Comparisons
 - [[comparisons/token-optimization-tools]] — RTK vs workflow optimization vs Code Mode vs Markdown for Agents
