@@ -3,8 +3,9 @@ type: concept
 sources:
   - misc/2026-04-05-improving-ai-generated-ui-with-plain-text-design-md-files.md
   - web-dev/2026-04-06-meng-to-s-ai-html-to-figma-design-tool.md
+  - creative/2026-03-29-ai-generated-hero-section-design-with-google-s-nano-banana.md
 created: 2026-04-07
-modified: 2026-04-07
+modified: 2026-04-12
 ---
 
 # DESIGN.md (Plain-Text Design Systems for AI)
@@ -16,6 +17,7 @@ A markdown-native design system format that LLMs understand natively, introduced
 - **awesome-design-md** (VoltAgent) curates DESIGN.md files extracted from 31 real sites — Stripe, Vercel, Notion, Supabase, Linear, NVIDIA, Apple — as ready-to-drop style guides
 - **Meng To's HTML-to-Design** inverse-engineers the same format: point it at any URL and it generates a DESIGN.md (and matching Figma file) with ~90% fidelity to the source site
 - **Why it works**: design tokens as prose fit naturally in the LLM's context window; no tool-use round-trip needed
+- **AI image generation for web design**: Google's Nano Banana (Gemini 2.5 Flash) generates hero section concepts from natural language prompts — "strong concept → Nano Banana → hero section" — complementing the DESIGN.md text-spec approach with visual concept generation
 - Pairs well with the broader "markdown as primary interface" trend: [[llm-wiki]], AGENTS.md, SOUL.md, lat.md — a family of markdown-first primitives
 
 ## Related
@@ -26,3 +28,4 @@ A markdown-native design system format that LLMs understand natively, introduced
 ## Sources
 - [[misc/2026-04-05-improving-ai-generated-ui-with-plain-text-design-md-files]] — awesome-design-md repo, Google Stitch origin
 - [[web-dev/2026-04-06-meng-to-s-ai-html-to-figma-design-tool]] — URL → DESIGN.md + Figma converter
+- [[creative/2026-03-29-ai-generated-hero-section-design-with-google-s-nano-banana]] — Nano Banana AI-generated hero section concepts

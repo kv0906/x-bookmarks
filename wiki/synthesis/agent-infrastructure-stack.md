@@ -58,6 +58,13 @@ Most production agents will need both — fast execution for API calls, durable 
 - **Security** is moving from "permission prompts" to "AI-classified safety" (Auto Mode, Plano proxy)
 - **Optimization** is becoming automated — Agent Lightning and autoresearch both use iterative loops to improve agent performance without human tuning
 
+## April 2026 Update
+
+- **Vercel Fluid Compute** closes the speed gap — Vercel Sandbox now claims #1 fastest microVM, with in-function concurrency blending server and serverless models
+- **Cloudflare Browser Rendering** adds CDP (Chrome DevTools Protocol) to the stack — MCP clients can now control remote headless Chrome at the edge
+- **Claude Managed Agents** on Vercel provide managed infrastructure with Vaults (secure credentials), durable polling, and streaming via Workflow SDK
+- **Context engineering** is emerging as the organizing principle for the Memory & Knowledge layer — agents actively construct context from multiple sources rather than passively retrieving
+
 ## What's Still Missing
 
 - **Observability standards** — each tool has its own logging/monitoring approach
@@ -71,3 +78,5 @@ Most production agents will need both — fast execution for API calls, durable 
 - [[ai-agent-memory]] — memory layer
 - [[comparisons/cloudflare-vs-vercel-sandboxes]] �� execution layer comparison
 - [[comparisons/token-optimization-tools]] — cost management approaches
+- [[context-engineering]] — the emerging methodology for the knowledge layer
+- [[synthesis/context-engineering-personal-ai-os]] — broader trend analysis

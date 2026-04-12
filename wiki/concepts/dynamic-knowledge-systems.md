@@ -6,8 +6,10 @@ sources:
   - ai-agents/2026-03-31-claude-code-s-sophisticated-ai-memory-architecture.md
   - ai-agents/2026-04-01-agent-lattice-markdown-based-knowledge-graph-for-codebases.md
   - ai-agents/2026-04-04-evolving-llm-prompts-into-self-managing-decision-engines-and.md
+  - ai-agents/2026-04-09-context-engineering-evolution-of-rag-and-agentic-search.md
+  - ai-agents/2026-04-09-scaling-personal-ai-knowledge-bases-filesystem-as-os.md
 created: 2026-04-05
-modified: 2026-04-07
+modified: 2026-04-12
 ---
 
 # Dynamic Knowledge Systems
@@ -21,12 +23,15 @@ Approaches for making AI instructions and knowledge bases self-evolving — syst
 - **Claude Code's autoDream** rewrites and prunes memory in the background, effectively self-editing its own knowledge base
 - **Key insight**: the most effective systems separate observation (what might be true) from conviction (what's been validated) — the promotion step is what prevents knowledge pollution
 - **CLAUDE.md as decision engine** (Pawel Huryn): three things make a config file compound into intelligence — knowledge architecture (INDEX routing), decision journal (LLM writes back templates/hypotheses/performance data after each session), and quality gate (hard rules that override instincts)
+- **Context engineering** replaces prompt engineering: the shift from static RAG (one-shot retrieval, 2020-2023) → Agentic RAG (multi-hop, agent decides if/when/what, 2023-2024) → Context Engineering (agent builds context from multiple sources — databases, filesystems, web, memory, 2025+)
+- **Personal AI OS** (Koylan): filesystem-as-database with Git versioning, cross-module references, and ingestion tools (Chrome extension, voice pipeline, Readwise CLI). The bottleneck is the knowledge transfer pipeline, not the architecture
 
 ## Related
 - [[ai-agent-memory]] — memory is the infrastructure; knowledge systems are the process
 - [[claude-code]] — practical platform for dynamic knowledge approaches
 - [[agent-orchestration]] — self-improving agents use orchestration loops for the promote/demote cycle
 - [[llm-wiki]] — the Karpathy pattern that elevates these ideas into a full knowledge-base architecture
+- [[context-engineering]] — the evolution of retrieval into agent-driven context construction
 
 ## Sources
 - [[ai-coding/2026-03-28-dynamic-ai-knowledge-system-with-adaptive-prompting]] — hypothesis-to-rule system with Prompt Cowboy
@@ -34,3 +39,5 @@ Approaches for making AI instructions and knowledge bases self-evolving — syst
 - [[ai-agents/2026-03-31-claude-code-s-sophisticated-ai-memory-architecture]] — autoDream background self-editing
 - [[ai-agents/2026-04-01-agent-lattice-markdown-based-knowledge-graph-for-codebases]] — lat.md codebase knowledge graph
 - [[ai-agents/2026-04-04-evolving-llm-prompts-into-self-managing-decision-engines-and]] — CLAUDE.md as decision engine architecture
+- [[ai-agents/2026-04-09-context-engineering-evolution-of-rag-and-agentic-search]] — RAG → Agentic RAG → Context Engineering evolution
+- [[ai-agents/2026-04-09-scaling-personal-ai-knowledge-bases-filesystem-as-os]] — Personal OS with filesystem-as-database, ingestion pipeline bottleneck
