@@ -6,8 +6,9 @@ sources:
   - ai-coding/2026-03-26-openai-codex-launches-plugins-for-enhanced-developer-workflo.md
   - web-dev/2026-03-27-cloudflare-plugin-for-openai-codex-enhanced-ai-development.md
   - tools/2026-03-25-ai-agent-control-real-chrome-with-dev-browser-and-webmcp-con.md
+  - ai-agents/2026-04-10-cloudflare-browser-rendering-cdp-for-remote-browser-automati.md
 created: 2026-04-05
-modified: 2026-04-05
+modified: 2026-04-12
 ---
 
 # MCP (Model Context Protocol)
@@ -20,6 +21,7 @@ Anthropic's open protocol for connecting LLMs to external tools and data sources
 - **OpenAI Codex** adopted MCP for its plugin system, integrating Slack, Figma, Notion, Gmail
 - **Cloudflare Codex plugin** exposes 2,500+ API endpoints via Codemode MCP with `search()` and `execute()` functions
 - **WebMCP** is Google's proposed web standard allowing websites to expose structured tools/capabilities to AI agents
+- **Cloudflare Browser Rendering** now exposes Chrome DevTools Protocol (CDP) via WebSocket, enabling MCP clients (Claude Desktop, Cursor) and CDP tools (Puppeteer, Playwright) to control remote headless Chrome instances at the edge — navigate pages, take screenshots, run performance audits, debug JavaScript
 - MCP is evolving from a tool-calling protocol into a broader agent infrastructure layer
 
 ## Related
@@ -34,3 +36,4 @@ Anthropic's open protocol for connecting LLMs to external tools and data sources
 - [[ai-coding/2026-03-26-openai-codex-launches-plugins-for-enhanced-developer-workflo]] — Codex adopting MCP for plugins
 - [[web-dev/2026-03-27-cloudflare-plugin-for-openai-codex-enhanced-ai-development]] — Cloudflare Codex plugin via MCP
 - [[tools/2026-03-25-ai-agent-control-real-chrome-with-dev-browser-and-webmcp-con]] — WebMCP web standard
+- [[ai-agents/2026-04-10-cloudflare-browser-rendering-cdp-for-remote-browser-automati]] — Cloudflare Browser Rendering CDP + MCP integration

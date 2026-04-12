@@ -28,6 +28,19 @@
 - quarantine: _trash/2026-04-09-addy-osmani-s-agent-skills-for-production-grade-ai-coding.md — near-duplicate of production-grade-engineering-workflows (same author @heygurisingh, same day, reply tweet with bare link)
 - Unmapped tags routed to misc/: defi-security, crypto-wallets, cybersecurity-checklist, ai-tools, diagram-generation, technical-documentation, natural-language-processing, python, ascii-art, console-games, software-development
 
+## [2026-04-12] compile | Incremental update for 19 uncompiled bookmarks (2026-03-25 to 2026-04-11)
+- Processed 19 new bookmarks across ai-agents, ai-coding, ai-research, tools, web-dev, creative, crypto, security, misc folders
+- Created 6 new concept pages: context-engineering, fireworks-tech-graph, langserve, llm-pruning, crypto-tokenization, aitm-phishing
+- Updated 9 existing concept pages: llm-wiki (+Personal OS movement), agent-skills (+Addy Osmani's Agent Skills), mcp (+Cloudflare Browser Rendering CDP), agent-orchestration (+9-layer architecture, Claude Managed Agents), browser-automation (+Cloudflare CDP), dynamic-knowledge-systems (+context engineering, Personal OS), cloudflare-dynamic-workers (+Browser Rendering), terminal-tools (+unicode-animations, ASCII art), design-md (+Nano Banana AI image gen)
+- Updated 1 comparison: cloudflare-vs-vercel-sandboxes (+Vercel Fluid Compute, #1 fastest microVM)
+- Updated 1 author profile (CloudflareDev → 3 bookmarks), created 2 new author profiles (PawelHuryn, oliviscusAI)
+- Created 1 new synthesis article: context-engineering-personal-ai-os (RAG → Context Engineering → Personal AI OS convergence)
+- Updated 1 existing synthesis: agent-infrastructure-stack (+April 2026 update section)
+- Dominant theme: context engineering as the successor to RAG, with personal filesystem-based AI OSes as the infrastructure layer
+- Previously flagged gaps resolved: crypto-tokenization (tbDEX + Chainlink + DeFi security) and llm-pruning (layer removal research) now have concept pages
+- All 72 bookmarks in the vault are now compiled into at least one wiki page
+- INDEX.md updated with 23 concepts, 3 comparisons, 8 authors, 4 synthesis articles
+
 ## [2026-04-07] cleanup | fixed 2 wikilinks, deleted 3 junk bookmarks
 - unbracketed [[graphify]] in wiki/concepts/llm-wiki.md
 - unbracketed [[visual-explainer]] in wiki/concepts/agent-skills.md

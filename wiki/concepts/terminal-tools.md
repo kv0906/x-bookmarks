@@ -5,8 +5,10 @@ sources:
   - tools/2026-03-27-termcraft-build-animated-terminal-uis-with-drag-drop.md
   - tools/2026-03-28-cli-agents-and-carbonyl-a-terminal-based-chromium-browser.md
   - misc/2026-04-04-yt-dlp-feature-rich-command-line-video-downloader.md
+  - tools/2026-04-08-unicode-animations-npm-package-for-loading-effects.md
+  - misc/2026-04-11-python-script-for-ascii-art-playing-cards.md
 created: 2026-04-05
-modified: 2026-04-07
+modified: 2026-04-12
 ---
 
 # Terminal Tools
@@ -19,6 +21,8 @@ A renaissance of terminal-native tools that bring rich capabilities to the CLI �
 - **CLI agents** (like Claude Code) are driving demand for terminal-native tools since they operate headlessly
 - The pattern: tools that used to require GUIs are getting terminal-native versions optimized for both human and AI agent use
 - **yt-dlp** remains the canonical CLI media-fetch workhorse (1,700+ sites, 4K/8K, playlists, metadata embedding) — an example of a decades-old terminal tool that agents can readily invoke as a primitive
+- **unicode-animations** npm package provides dependency-free Unicode spinner animations as raw frame data — CLI and web compatible, includes utility functions for custom braille grid spinners. Author is a Perplexity designer
+- **ASCII art playing cards** (naivoder/ascii_cards) — pure Python, no dependencies, integrates into text-based card games. Part of the broader trend of text-native visual primitives for terminal environments
 
 ## Related
 - [[browser-automation]] — Carbonyl bridges browser and terminal worlds
@@ -30,3 +34,5 @@ A renaissance of terminal-native tools that bring rich capabilities to the CLI �
 - [[tools/2026-03-27-termcraft-build-animated-terminal-uis-with-drag-drop]] — Termcraft UI builder
 - [[tools/2026-03-28-cli-agents-and-carbonyl-a-terminal-based-chromium-browser]] — CLI agent browsing patterns
 - [[misc/2026-04-04-yt-dlp-feature-rich-command-line-video-downloader]] — yt-dlp universal media downloader
+- [[tools/2026-04-08-unicode-animations-npm-package-for-loading-effects]] — unicode-animations: dependency-free spinners for CLI and web
+- [[misc/2026-04-11-python-script-for-ascii-art-playing-cards]] — ASCII art playing cards in pure Python

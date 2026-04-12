@@ -8,8 +8,10 @@ sources:
   - ai-agents/2026-04-06-12-agentic-harness-patterns-from-production-coding-agents.md
   - misc/2026-04-05-critique-of-harness-engineering-in-ai-agent-development.md
   - ai-agents/2026-04-05-autonomous-ai-sports-article-writer-using-deepseek-and-llm-j.md
+  - ai-agents/2026-04-11-comprehensive-9-layer-production-ai-architecture-breakdown.md
+  - ai-agents/2026-04-11-building-claude-managed-agents-on-vercel-with-secure-integra.md
 created: 2026-04-05
-modified: 2026-04-07
+modified: 2026-04-12
 ---
 
 # Agent Orchestration
@@ -29,6 +31,8 @@ Patterns and frameworks for running AI agents reliably at scale — covering har
 - **Autoresearch** (Karpathy) automates iterative prompt/skill improvement — 41% → 92% in 4 rounds
 - **Plano** provides an AI-native security proxy filtering every request/response
 - **LLM-as-judge** pattern in practice: SportsWriter uses DeepSeek for generation and an LLM judge for quality assessment — scalable automated eval
+- **9-layer production architecture** (@techNmak): services (RAG pipeline, semantic cache, memory, query rewriter, router), agents (document grader, decomposer, adaptive router — self-correcting by design), versioned prompts (typed, registered, never hardcoded), security (input/content/output — three guards), evaluation (golden dataset + offline eval + online monitor), observability (per-stage tracing, feedback linked to traces, cost per query), and `.claude/` agent context
+- **Claude Managed Agents on Vercel**: managed infrastructure for agent deployment — Vercel Vaults for secure credential management (GitHub, Notion, Slack), durable polling for long-running tasks, streaming responses via Workflow SDK
 
 ## Related
 - [[ai-agent-memory]] — memory enables stateful orchestration
@@ -45,3 +49,5 @@ Patterns and frameworks for running AI agents reliably at scale — covering har
 - [[ai-agents/2026-04-06-12-agentic-harness-patterns-from-production-coding-agents]] — 12 patterns categorized with trade-offs
 - [[misc/2026-04-05-critique-of-harness-engineering-in-ai-agent-development]] — counterpoint: systems vs harness framing
 - [[ai-agents/2026-04-05-autonomous-ai-sports-article-writer-using-deepseek-and-llm-j]] — LLM-as-judge in a production content pipeline
+- [[ai-agents/2026-04-11-comprehensive-9-layer-production-ai-architecture-breakdown]] — 9-layer production AI architecture checklist
+- [[ai-agents/2026-04-11-building-claude-managed-agents-on-vercel-with-secure-integra]] — Claude Managed Agents on Vercel with Vaults and Workflow SDK

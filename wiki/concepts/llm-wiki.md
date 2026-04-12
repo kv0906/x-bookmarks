@@ -7,8 +7,9 @@ sources:
   - ai-agents/2026-04-04-evolving-llm-prompts-into-self-managing-decision-engines-and.md
   - ai-agents/2026-04-06-graphify-llm-powered-knowledge-graph-tool-for-codebases-and-.md
   - misc/2026-04-06-leveraging-llm-powered-knowledge-bases-for-ai-marketers.md
+  - ai-agents/2026-04-09-scaling-personal-ai-knowledge-bases-filesystem-as-os.md
 created: 2026-04-07
-modified: 2026-04-07
+modified: 2026-04-12
 ---
 
 # LLM Wiki (Personal Knowledge Base Pattern)
@@ -24,6 +25,8 @@ Andrej Karpathy's "LLM Wiki" pattern: instead of retrieving knowledge on every q
 - **Idea file primitive** (Karpathy): share markdown concepts with agents instead of code repos — the agent customizes implementation to the existing system
 - **Derivative tools**: Graphify-style tools emerged within 48 hours, generating navigable knowledge graphs from any folder with 71.5x fewer tokens per query vs raw file reading
 - **Use cases**: personal research, academic reading, business knowledge (Slack/meetings), fan wikis, marketing swipe files
+- **Personal OS movement** (Muratcan Koylan): the filesystem-as-database pattern — a Git repo of markdown files acts as a portable, version-controlled memory for AI agents. Independent validation of Karpathy's thesis. The harder problem is the **knowledge transfer pipeline** (Chrome extensions, voice pipelines, Readwise CLI, MCP hooks) — nobody wants to be the cron job for their own life
+- **Context engineering over prompt engineering**: structuring information for the AI to make sound judgments matters more than optimizing individual prompts
 
 ## Related
 - [[dynamic-knowledge-systems]] — the self-evolving knowledge mechanics this pattern depends on
@@ -38,3 +41,4 @@ Andrej Karpathy's "LLM Wiki" pattern: instead of retrieving knowledge on every q
 - [[ai-agents/2026-04-04-evolving-llm-prompts-into-self-managing-decision-engines-and]] — CLAUDE.md as decision engine, AGENTS.md schema
 - [[ai-agents/2026-04-06-graphify-llm-powered-knowledge-graph-tool-for-codebases-and-]] — Graphify (48-hour derivative, 71.5x token reduction)
 - [[misc/2026-04-06-leveraging-llm-powered-knowledge-bases-for-ai-marketers]] — applied to marketer swipe files
+- [[ai-agents/2026-04-09-scaling-personal-ai-knowledge-bases-filesystem-as-os]] — Koylan's Personal OS, filesystem-as-database, ingestion pipeline challenge
