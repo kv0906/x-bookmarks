@@ -18,6 +18,7 @@ Research finding that pre-trained LLMs have significant redundancy in their deep
 - Implications for [[token-optimization]]: smaller models mean fewer compute costs per query, complementing token-level optimizations
 
 ## Related
+- [[scaling-laws]] — pruning challenges scaling laws by showing that not all parameters are equally useful
 - [[token-optimization]] — pruning attacks cost from the model side; token optimization attacks it from the input side
 - [[agent-orchestration]] — smaller models enable more cost-effective agent deployments
 

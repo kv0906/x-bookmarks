@@ -46,6 +46,17 @@
 - Deleted wiki/concepts/aitm-phishing.md (source: security/aitm-phishing)
 - Updated INDEX.md — now 21 concepts
 
+## [2026-04-12] compile | Incremental update for 13 new LLM Foundations notes
+- Processed 13 new bookmarks in ai-research/ (all 2026-04-12, user-created first-principles series)
+- Quality gate: all 13 pass — substantial educational content with specific concepts, techniques, and PM insights; no quarantines
+- Created 5 new concept pages: rag (RAG pipeline + chunking + vector DB + vector search + cosine similarity), attention-mechanism, kv-cache, scaling-laws, embedding
+- Updated 1 existing concept page: llm-inference (major rewrite — added 5 sources, expanded GPU/matrix-mult/quantization/prefill-decode sections; was previously an orphan with sources: [])
+- Updated 2 existing concept pages with cross-references: llm-pruning (+scaling-laws link), context-engineering (+rag link)
+- Created 1 new synthesis article: llm-foundations-pm-guide (learning map across all 13 notes with three knowledge clusters)
+- INDEX.md updated: 27 concepts, 3 comparisons, 8 authors, 5 synthesis articles
+- All 85 bookmarks in the vault are now compiled into at least one wiki page
+- New connections found: RAG as predecessor to context-engineering, scaling-laws as counterpoint to llm-pruning, KV cache as bridge between attention and inference performance
+
 ## [2026-04-07] cleanup | fixed 2 wikilinks, deleted 3 junk bookmarks
 - unbracketed [[graphify]] in wiki/concepts/llm-wiki.md
 - unbracketed [[visual-explainer]] in wiki/concepts/agent-skills.md

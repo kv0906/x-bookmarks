@@ -19,6 +19,7 @@ The evolution beyond prompt engineering: instead of optimizing what you say to a
 - Workshop materials and code available from @helloiamleonie's GitHub repo on agentic search
 
 ## Related
+- [[rag]] — the predecessor paradigm that context engineering evolved from
 - [[dynamic-knowledge-systems]] — the self-evolving systems that context engineering enables
 - [[llm-wiki]] — a concrete implementation of the context engineering philosophy
 - [[ai-agent-memory]] — memory as one of several context sources
