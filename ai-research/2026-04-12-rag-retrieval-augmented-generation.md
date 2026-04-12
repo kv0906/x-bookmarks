@@ -14,6 +14,37 @@ RAG = cho LLM "tra cứu tài liệu bên ngoài" trước khi trả lời.
 LLM chỉ biết những gì nó đã học trong training (có cutoff date).  
 RAG lấy dữ liệu mới nhất (hợp đồng, tài liệu công ty, website…) → đưa vào prompt → model trả lời dựa trên dữ liệu thật.
 
+## ASCII Diagram: RAG Pipeline
+
+    User: "Chính sách nghỉ phép công ty thế nào?"
+      │
+      ▼
+    ┌──────────────┐     ┌───────────────────────┐
+    │  Embedding   │────►│   Vector Database      │
+    │  (câu hỏi   │     │                        │
+    │   → vector)  │     │  ● Nội quy công ty    │
+    └──────────────┘     │  ● Chính sách HR  ◄───┤── tìm gần nhất
+                         │  ● Hợp đồng mẫu      │
+                         └───────────┬───────────┘
+                                     │ top-k chunks
+                                     ▼
+                         ┌───────────────────────┐
+                         │       Prompt           │
+                         │ Câu hỏi + Tài liệu    │
+                         │ liên quan              │
+                         └───────────┬───────────┘
+                                     │
+                                     ▼
+                         ┌───────────────────────┐
+                         │        LLM             │
+                         │  Sinh câu trả lời      │
+                         │  dựa trên tài liệu     │
+                         └───────────┬───────────┘
+                                     │
+                                     ▼
+                         "Theo chính sách HR,
+                          bạn được 12 ngày/năm..."
+
 ## Quy trình đơn giản
 1. User hỏi
 2. Hệ thống tìm tài liệu liên quan (vector search)

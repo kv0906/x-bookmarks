@@ -14,6 +14,27 @@ Thay vì lưu text thông thường như MySQL hay MongoDB, VectorDB lưu **vect
 
 ## ASCII Diagram: VectorDB hoạt động
 
+    Lưu trữ truyền thống (MySQL):
+    ┌────────────┬───────────────────────┐
+    │ ID         │ Text                  │
+    ├────────────┼───────────────────────┤
+    │ 1          │ "chính sách nghỉ phép"│  ← tìm bằng từ khóa
+    │ 2          │ "quy trình onboard"   │
+    └────────────┴───────────────────────┘
+
+    Vector Database (Pinecone, Weaviate...):
+    ┌────────────┬───────────────────────────────────┐
+    │ ID         │ Vector Embedding                  │
+    ├────────────┼───────────────────────────────────┤
+    │ 1          │ [0.23, 0.87, -0.12, 0.45, ...]   │  ← tìm bằng
+    │ 2          │ [0.21, 0.85, -0.10, 0.43, ...]   │    độ tương đồng
+    │ 3          │ [-0.5, 0.12, 0.90, -0.33, ...]   │
+    └────────────┴───────────────────────────────────┘
+
+    Query: "ngày nghỉ" → [0.22, 0.86, -0.11, 0.44, ...]
+                              ↓
+    Kết quả: ID 1 (gần nhất), ID 2 (gần), ID 3 (xa) ✗
+
 ## First Principle đơn giản
 Mọi thứ trong VectorDB đều dựa trên ý tưởng:  
 **Những ý nghĩa giống nhau sẽ có vector nằm gần nhau trong không gian số.**

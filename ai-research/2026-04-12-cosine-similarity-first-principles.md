@@ -15,6 +15,32 @@ Giá trị từ -1 đến 1:
 - Gần 0 = không liên quan
 - Gần -1 = ngược nhau hoàn toàn
 
+## ASCII Diagram: Cosine Similarity
+
+              ▲
+              │   A
+              │  ╱   cos(θ) ≈ 1.0 (rất giống)
+              │ ╱ θ nhỏ
+              │╱───── B
+              │
+              │
+    ──────────┼──────────►
+              │
+              │
+              │╲
+              │ ╲ θ = 90°
+              │  ╲   cos(θ) ≈ 0 (không liên quan)
+              │   C
+              │
+
+    Ví dụ:
+    A = "machine learning"  ─┐
+    B = "deep learning"      ├── cos(A,B) = 0.95 ← rất giống
+                             │
+    A = "machine learning"  ─┤
+    C = "nấu ăn ngon"       ├── cos(A,C) = 0.05 ← không liên quan
+                             │
+
 ## First Principle đơn giản
 Hai vector càng chỉ cùng hướng → ý nghĩa của chúng càng giống nhau.  
 Cosine Similarity chỉ quan tâm **hướng**, không quan tâm **độ dài** vector.

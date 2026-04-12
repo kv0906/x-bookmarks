@@ -12,6 +12,27 @@ modified: 2026-04-12
 
 Nó giúp model biết từ nào liên quan đến từ nào, dù cách xa nhau.
 
+## ASCII Diagram: Attention hoạt động
+
+    Câu: "Tôi thích ăn phở vì nó ngon"
+
+    Attention scores (model tự tính):
+
+            Tôi  thích  ăn  phở  vì  nó  ngon
+    Tôi     ██    ░     ░   ░    ░   ░    ░
+    thích   ░     ██    ░   ███  ░   ░    ░
+    ăn      ░     ░     ██  ███  ░   ░    ░
+    phở     ░     ░     ░   ██   ░   ░    ███
+    vì      ░     ███   ░   ░    ██  ░    ███
+    nó ──── ░     ░     ░   ███◄─░── ██   ███
+    ngon    ░     ░     ░   ███  ░   ░    ██
+
+    ██ = chú ý vào chính mình
+    ███ = chú ý mạnh (liên quan)
+    ░ = ít chú ý
+
+    → "nó" chú ý mạnh vào "phở" → model biết "nó" = "phở"
+
 ## First Principle đơn giản
 Model không đọc câu theo thứ tự như con người.  
 Nó nhìn **toàn bộ câu cùng lúc** và tự hỏi:  

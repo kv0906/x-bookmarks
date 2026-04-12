@@ -12,6 +12,25 @@ modified: 2026-04-12
 
 Trong LLM, **hầu hết công việc** (tính attention, dự đoán token…) đều là nhân ma trận.
 
+## ASCII Diagram: Matrix Multiplication (ví dụ đơn giản)
+
+    Ma trận A (2×3)       Ma trận B (3×2)       Kết quả C (2×2)
+    ┌───┬───┬───┐         ┌───┬───┐             ┌────┬────┐
+    │ 1 │ 2 │ 3 │    ×    │ 7 │ 8 │      =      │ 58 │ 64 │
+    ├───┼───┼───┤         ├───┼───┤             ├────┼────┤
+    │ 4 │ 5 │ 6 │         │ 9 │10 │             │139 │154 │
+    └───┴───┴───┘         ├───┼───┤             └────┴────┘
+                          │11 │12 │
+                          └───┴───┘
+
+    Cách tính ô (1,1): 1×7 + 2×9 + 3×11 = 58
+
+    Trong LLM thật:
+    ┌─────────────┐     ┌──────────────┐     ┌──────────────┐
+    │ Input tokens │  ×  │   Weights     │  =  │  Output       │
+    │ (hàng nghìn) │     │ (hàng tỷ số) │     │ (dự đoán)    │
+    └─────────────┘     └──────────────┘     └──────────────┘
+
 ## First Principle
 Mọi kiến thức, logic, câu trả lời của model đều xuất phát từ **hàng tỷ phép nhân ma trận**.
 
