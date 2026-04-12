@@ -19,6 +19,15 @@
 
 ## [2026-04-07] lint | Health 8.5/10. 8 uncompiled bookmarks, 2 broken wikilinks, 0 stale refs, 0 orphans, 0 contradictions. Suggested 2 new concept pages (crypto-tokenization, llm-efficiency-research). Report: outputs/2026-04-07-lint-report.md
 
+## [2026-04-12] organize | Moved 13 bookmarks from root into topic folders, quarantined 1
+- ai-agents/: 6 files (scaling-personal-ai-knowledge-bases, context-engineering-evolution, comprehensive-9-layer-production-ai, cloudflare-browser-rendering-cdp, building-claude-managed-agents, fireworks-tech-graph-ai-powered)
+- ai-coding/: 1 file (production-grade-engineering-workflows)
+- tools/: 2 files (unicode-animations-npm-package, introducing-langserve)
+- web-dev/: 1 file (vercel-sandbox-achieves-fastest-microvm)
+- misc/: 3 files (ultimate-defi-crypto-wallet-security-checklist, ai-powered-technical-diagram-generation, python-script-for-ascii-art-playing-cards)
+- quarantine: _trash/2026-04-09-addy-osmani-s-agent-skills-for-production-grade-ai-coding.md — near-duplicate of production-grade-engineering-workflows (same author @heygurisingh, same day, reply tweet with bare link)
+- Unmapped tags routed to misc/: defi-security, crypto-wallets, cybersecurity-checklist, ai-tools, diagram-generation, technical-documentation, natural-language-processing, python, ascii-art, console-games, software-development
+
 ## [2026-04-07] cleanup | fixed 2 wikilinks, deleted 3 junk bookmarks
 - unbracketed [[graphify]] in wiki/concepts/llm-wiki.md
 - unbracketed [[visual-explainer]] in wiki/concepts/agent-skills.md
