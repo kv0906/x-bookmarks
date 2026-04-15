@@ -8,7 +8,7 @@ sources:
   - ai-research/2026-04-12-cosine-similarity-first-principles.md
   - ai-research/2026-04-12-llm-foundations-first-principles.md
 created: 2026-04-12
-modified: 2026-04-12
+modified: 2026-04-15
 ---
 
 # RAG (Retrieval-Augmented Generation)
@@ -17,7 +17,7 @@ RAG lets an LLM consult external documents before answering, bridging the gap be
 
 ## Key Points
 - **Core pipeline**: User query → embedding → vector search → top-k chunks → prompt assembly → LLM generation
-- **Chunking** is a critical preprocessing step: documents must be split into pieces (256–1024 tokens) that are short enough for accurate embedding but long enough to preserve context
+- **[[chunking]]** is a critical preprocessing step: documents must be split into pieces (256–1024 tokens) that are short enough for accurate embedding but long enough to preserve context
 - **Embedding models** convert text into high-dimensional vectors where semantic similarity maps to geometric proximity — choosing the right embedding model is a key quality lever
 - **Vector databases** (Pinecone, Weaviate, Chroma) store these embeddings and enable sub-second similarity search at scale, replacing traditional keyword-based retrieval
 - **Cosine similarity** is the dominant distance metric: it measures the angle between two vectors (0–1 scale), ignoring magnitude — fast and effective for text
@@ -33,6 +33,7 @@ User Query → Embed → Vector Search → Top-K Chunks → Prompt + LLM → Ans
 ```
 
 ## Related
+- [[chunking]] — document splitting determines retrieval granularity and context preservation
 - [[embedding]] — the representation layer that makes RAG work
 - [[context-engineering]] — RAG's evolution: agents building their own context from multiple sources
 - [[llm-inference]] — RAG adds a retrieval step before inference

@@ -1,6 +1,6 @@
 # Wiki Index
 
-Last updated: 2026-04-12
+Last updated: 2026-04-15
 
 ## Concepts
 - [[concepts/claude-code]] — Anthropic's agentic coding tool and its ecosystem of skills, plugins, and memory
@@ -21,6 +21,7 @@ Last updated: 2026-04-12
 - [[concepts/design-md]] — Plain-text DESIGN.md design systems and AI-generated visual concepts
 - [[concepts/openclaw]] — File-first cognitive architecture with SOUL.md personality layer
 - [[concepts/context-engineering]] — From RAG to agentic search: agents build their own context from multiple sources
+- [[concepts/chunking]] — The document-splitting layer that determines retrieval quality before search even begins
 - [[concepts/fireworks-tech-graph]] — Claude Code skill for generating technical architecture diagrams from natural language
 - [[concepts/langserve]] — LangChain deployment framework for turning chains/agents into REST APIs
 - [[concepts/llm-pruning]] — Layer removal in LLMs: up to 50% of deeper layers are redundant

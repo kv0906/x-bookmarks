@@ -63,3 +63,54 @@
 - deleted tools/2026-03-26-essential-product-management-metrics-and-kpis-guide.md (bare t.co link, generic filler, [object Object])
 - deleted tools/2026-03-27-claude-ai-for-rapid-project-output.md (vague "I used Claude and it was fast", no tool/insight)
 - deleted ai-research/2026-03-24-identifying-intelligent-e-acc-voices-on-ai-risk.md (Manifold prediction market curiosity, zero reusable knowledge)
+
+## [2026-04-15] compile | Incremental no-op pass
+- Evaluated 4 uncompiled bookmarks across crypto/, misc/, and security/
+- Quality gate: all 4 pass — substantive content, no quarantines
+- Created 0 pages, updated 0 pages
+- Skipped reintegration of 4 bookmarks because their prior wiki destinations were intentionally removed in [2026-04-12] cleanup per user request:
+- crypto/2026-03-31-square-s-tbdex-white-paper-decentralized-bitcoin-exchange-pr.md
+- crypto/2026-04-04-chainlink-s-role-in-tokenization-of-global-financial-markets.md
+- misc/2026-04-08-ultimate-defi-crypto-wallet-security-checklist.md
+- security/2026-03-25-sophisticated-aitm-phishing-attack-via-twitter-t-co-links.md
+- qmd index refreshed for xbm
+
+## [2026-04-15] lint | Wiki health check
+- Health score: 7.9/10
+- Issues found: 6 (2 critical, 3 warnings, 1 suggestion)
+- Uncompiled bookmarks: 4
+- Report: outputs/2026-04-15-lint-report.md
+
+## [2026-04-15] cleanup | Resolved top lint issues
+- Created 1 concept page: `wiki/concepts/chunking.md`
+- Updated `wiki/concepts/rag.md` and `wiki/INDEX.md` to wire `[[chunking]]` into the wiki graph
+- Added `wiki-exclusions.yml` to mark 4 deliberately removed crypto/security bookmarks as intentional exclusions
+- Updated compile/lint instructions in `CLAUDE.md`, `.codex/skills/`, and `.claude/commands/` to honor exclusion state
+
+## [2026-04-15] lint | Post-fix validation
+- Health score: 8.7/10
+- Issues found: 4 (0 critical, 3 warnings, 1 suggestion)
+- Uncompiled bookmarks: 0
+- Intentional exclusions tracked: 4
+- Report: outputs/2026-04-15-lint-report.md
+
+## [2026-04-15] organize | Moved 22 bookmarks from root into topic folders
+- ai-agents/: 14 files (codex-0-120-0, mem0-ai, chrome-devtools-mcp, codifying-judgment-lenses, langgraph-course, polishing-agent-uis, ronin-content-engine, memory-in-agent-intelligence, vercel-agent-browser, cloudflare-sandboxes, graph-based-skill-retrieval, karpathy-llm-wiki, cloudflare-sandboxes-ga, bridge-claude-managed-agents-linear)
+- web-dev/: 3 files (practical-ui-design-cheatsheet, cloudflare-mesh-workers-vpc, cloudflare-mesh-private-network)
+- tools/: 3 files (cli-to-js, rust-terminal-spinners, wterm)
+- misc/: 2 files (nimitz-wwii-leadership, x-ai-stories-grok)
+- quarantine: 0
+- Updated _topic-map.yml with 20 new tag mappings across ai-agents, ai-coding, tools, web-dev
+
+## [2026-04-15] cleanup | Vault purge — removed crypto, misc, low-value content
+- Deleted crypto/ folder entirely (2 files → _trash): tbdex, chainlink-tokenization
+- Deleted misc/ folder entirely after triage:
+  - quarantine: 6 files → _trash (data-science-internship, web3-iexec, generalism-essay, defi-wallet-checklist, nimitz-leadership, x-grok-stories)
+  - Moved 6 valuable files to correct folders:
+    - tools/: yt-dlp
+    - ai-agents/: harness-engineering-critique
+    - ai-coding/: design-md, llm-knowledge-bases, fireworks-tech-graph
+    - creative/: ascii-art-cards
+- Removed crypto section from _topic-map.yml
+- Cleaned wiki-exclusions.yml (removed 3 entries for trashed crypto/defi files)
+- Remaining folders: ai-agents, ai-coding, ai-media, ai-research, tools, web-dev, creative, security

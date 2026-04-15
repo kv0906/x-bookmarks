@@ -1,0 +1,6 @@
+excluded_bookmarks:
+  - path: security/2026-03-25-sophisticated-aitm-phishing-attack-via-twitter-t-co-links.md
+    reason: Intentional wiki exclusion after removing the AITM phishing concept from the graph.
+    excluded_on: 2026-04-15
+    review_status: excluded-until-user-reinstates
+    source_event: 2026-04-12 cleanup

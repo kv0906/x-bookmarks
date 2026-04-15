@@ -13,6 +13,15 @@ ai-agents:
   - autonomous-agents
   - llm-orchestration
   - memory-management
+  - agent-architecture
+  - agentic-ai
+  - llm-memory
+  - agent-harness-design
+  - skill-retrieval
+  - llm-context-management
+  - linear-integration
+  - anthropic-claude
+  - workflow-automation
 
 ai-coding:
   - ai-coding
@@ -27,6 +36,7 @@ ai-coding:
   - ai-optimization
   - token-optimization
   - token-management
+  - openai-codex
 
 ai-media:
   - ai-music-production
@@ -48,6 +58,7 @@ ai-research:
 tools:
   - cli-tools
   - cli-utilities
+  - cli-automation
   - ai-productivity-tools
   - ai-productivity
   - notebooklm
@@ -55,14 +66,20 @@ tools:
   - terminal-ui
   - terminal-browsing
   - terminal-applications
+  - terminal-emulator
   - browser-automation
   - developer-tools
   - development-tools
   - open-source-tools
+  - rustlang
+  - ratatui
 
 web-dev:
   - ai-web-development
   - ui-engineering
+  - ui-design
+  - design-system
+  - product-design
   - web-development
   - web-design
   - front-end-development
@@ -73,10 +90,16 @@ web-dev:
   - cloudflare-api
   - cloudflare-workers
   - cloudflare
+  - private-networking
+  - workers-vpc
   - cloud-development
   - cloud-infrastructure
+  - cloud-computing
+  - network-security
+  - remote-access
   - typescript
   - javascript-library
+  - wasm
 
 creative:
   - pixel-art
@@ -96,8 +119,3 @@ security:
   - phishing-attacks
   - social-engineering
   - proxy-security
-
-crypto:
-  - bitcoin
-  - decentralized-finance
-  - blockchain-protocols

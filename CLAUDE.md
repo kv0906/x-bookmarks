@@ -25,8 +25,6 @@ Personal knowledge base of curated bookmarks — tools, frameworks, tips, GitHub
 | `web-dev/` | Frontend, backend, infra, deployment, Cloudflare, Vercel |
 | `creative/` | Visual/creative tools, pixel art, shaders, image processing |
 | `security/` | Cybersecurity, phishing, social engineering |
-| `crypto/` | Bitcoin, DeFi, blockchain |
-| `misc/` | Anything that doesn't fit above |
 
 ## Bookmark File Format
 
@@ -115,6 +113,7 @@ log.md               → Append-only record of all wiki operations
 - Use `[[wikilinks]]` for cross-references between wiki pages
 - Use `[[folder/filename]]` to link back to source bookmarks (without .md extension for Obsidian)
 - Maintain `wiki/INDEX.md` — update it on every compile
+- `wiki-exclusions.yml` is the source of truth for bookmarks intentionally kept out of the wiki graph; `/compile` and `/lint` must read it before treating a bookmark as an uncompiled gap
 - `log.md` is append-only, one `## [date] operation | description` entry per operation
 - `outputs/` stores generated reports with `YYYY-MM-DD-slug.md` naming
 
@@ -166,6 +165,6 @@ qmd update && qmd embed
 
 ### Operations
 
-- `/compile` — Build/update the wiki from all bookmarks (incremental), then refresh qmd index
+- `/compile` — Build/update the wiki from all non-excluded bookmarks (incremental), then refresh qmd index
 - `/query <question>` — Search with qmd, synthesize answer, save to outputs/
-- `/lint` — Health check: find gaps, contradictions, orphans, qmd index freshness
+- `/lint` — Health check: find gaps, contradictions, orphans, intentional exclusions, qmd index freshness
