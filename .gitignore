@@ -1,4 +1,8 @@
+# macOS / Finder noise
+.DS_Store
+
 # Obsidian workspace (user-specific)
+.obsidian/graph.json
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/plugins/
