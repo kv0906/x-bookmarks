@@ -11,72 +11,62 @@ sources:
   - web-dev/2026-03-24-cloudflare-dynamic-workers-faster-lighter-serverless-sandbox.md
   - web-dev/2026-03-26-vercel-sandbox-automatic-persistence-beta.md
   - tools/2026-03-25-ai-agent-control-real-chrome-with-dev-browser-and-webmcp-con.md
+  - ai-agents/2026-04-11-building-claude-managed-agents-on-vercel-with-secure-integra.md
+  - ai-agents/2026-04-13-cloudflare-sandboxes-ga-secure-computing-for-ai-agents.md
+  - web-dev/2026-04-14-cloudflare-mesh-workers-vpc-for-private-networking.md
 created: 2026-04-05
-modified: 2026-04-05
+modified: 2026-04-20
 ---
 
 # The Emerging Agent Infrastructure Stack
 
-A stack is forming for production AI agents. Synthesizing 10+ bookmarks reveals distinct layers, each with competing solutions:
+A stack is forming for production AI agents. The recent bookmarks make the layers clearer and add two missing pieces: durable compute and private networking.
 
 ## The Stack
 
-```
-┌─────────────────────────────────────┐
-│  Orchestration & Learning           │  ralph-orchestrator, Agent Lightning
-│  (loops, eval, RL optimization)     │  autoresearch
-├───────���─────────────────────────────┤
-│  Memory & Knowledge                 │  Mem0, Claude Code memory,
-│  (persistence, context, learning)   │  dynamic knowledge systems
-├──────────────────��──────────────────┤
-│  Security & Observability           │  Plano proxy, Auto Mode classifiers
-│  (filtering, auditing, safety)      │
-├─��────────────────────────────��──────┤
-│  Protocol                           │  MCP, WebMCP, Code Mode
-│  (tool calling, service discovery)  │
-├─────────────────────────────────────┤
-│  Execution                          │  Cloudflare Dynamic Workers,
-│  (sandboxes, isolates, VMs)         │  Vercel Sandboxes, V8 isolates
-├─────��──────────────────────────���────┤
-│  I/O                                │  dev-browser, Carbonyl, agent-browser
-│  (browser, terminal, APIs)          │
-└─────────────────────────────────────┘
+```text
+Orchestration & Learning   -> ralph-orchestrator, Agent Lightning, managed agents
+Memory & Knowledge         -> Mem0, Claude Code memory, dynamic knowledge systems
+Security & Observability   -> Plano, Auto Mode-like safety controls, eval loops
+Protocol                   -> MCP, WebMCP, Code Mode
+Execution                  -> Dynamic Workers, Cloudflare Sandboxes, Vercel Sandboxes
+Network & I/O              -> dev-browser, agent-browser, Carbonyl, Cloudflare Mesh
 ```
 
-## Key Insight: Speed vs Durability Trade-off
+## Key Insight: the Stack Is Splitting
 
-The stack splits on a fundamental tension:
-- **Cloudflare path**: fast, stateless, token-efficient (V8 isolates, Code Mode, Markdown for Agents)
-- **Vercel path**: durable, stateful, flexible (microVMs, filesystem persistence, full Linux)
+- **Cloudflare path** now has two execution layers:
+  - [[cloudflare-dynamic-workers]] for fast, stateless, token-efficient execution
+  - [[cloudflare-sandboxes]] for stateful shells, filesystems, and background processes
+- **Vercel path** remains focused on durable compute and managed operations, with Sandboxes plus Claude Managed Agents
 
-Most production agents will need both — fast execution for API calls, durable state for long-running workflows.
+This is a healthier shape than the earlier "fast vs durable" binary. Vendors are starting to offer both ends of the execution spectrum, while differentiating on ergonomics and ecosystem.
 
-## What's Converging
+## What’s Converging
 
-- **MCP** is winning as the protocol layer — adopted by both Claude Code and Codex
-- **Memory** is becoming a first-class infrastructure concern, not an afterthought
-- **Security** is moving from "permission prompts" to "AI-classified safety" (Auto Mode, Plano proxy)
-- **Optimization** is becoming automated — Agent Lightning and autoresearch both use iterative loops to improve agent performance without human tuning
+- **MCP** is winning as the protocol layer
+- **Memory** is now a first-class infrastructure concern rather than an application afterthought
+- **Managed orchestration** is moving from solo-agent loops into team-facing systems like Linear and Vercel workflows
+- **Private networking** is becoming explicit infrastructure through tools like [[cloudflare-mesh]], which lets agents reach private MCP servers, APIs, and databases
 
 ## April 2026 Update
 
-- **Vercel Fluid Compute** closes the speed gap — Vercel Sandbox now claims #1 fastest microVM, with in-function concurrency blending server and serverless models
-- **Cloudflare Browser Rendering** adds CDP (Chrome DevTools Protocol) to the stack — MCP clients can now control remote headless Chrome at the edge
-- **Claude Managed Agents** on Vercel provide managed infrastructure with Vaults (secure credentials), durable polling, and streaming via Workflow SDK
-- **Context engineering** is emerging as the organizing principle for the Memory & Knowledge layer — agents actively construct context from multiple sources rather than passively retrieving
+- **Cloudflare Sandboxes GA** gives Cloudflare a durable compute layer, not just ultra-fast isolates
+- **Cloudflare Mesh + Workers VPC** add a private-network plane for agents, Workers, and Durable Objects
+- **Claude Managed Agents on Vercel** keep pushing the "managed runtime for teams" direction
+- **Browser Rendering + DevTools MCP** show protocol and I/O layers blending together
 
-## What's Still Missing
+## What’s Still Missing
 
-- **Observability standards** — each tool has its own logging/monitoring approach
-- **Agent-to-agent communication** — current stack assumes single-agent architectures
-- **Cost management** — no standard way to budget and track token/compute costs across the stack
+- **Observability standards** across agent frameworks and platforms
+- **Portable cost management** across token spend, compute, and tool invocations
+- **Agent-to-agent coordination norms** beyond ad hoc orchestration patterns
 
 ## Related Concepts
 - [[mcp]] — protocol layer
-- [[cloudflare-dynamic-workers]] — execution layer
+- [[cloudflare-dynamic-workers]] — fast execution layer
+- [[cloudflare-sandboxes]] — durable execution layer
+- [[cloudflare-mesh]] — private-network layer
 - [[agent-orchestration]] — orchestration layer
 - [[ai-agent-memory]] — memory layer
-- [[comparisons/cloudflare-vs-vercel-sandboxes]] �� execution layer comparison
-- [[comparisons/token-optimization-tools]] — cost management approaches
-- [[context-engineering]] — the emerging methodology for the knowledge layer
-- [[synthesis/context-engineering-personal-ai-os]] — broader trend analysis
+- [[comparisons/cloudflare-vs-vercel-sandboxes]] — execution trade-offs

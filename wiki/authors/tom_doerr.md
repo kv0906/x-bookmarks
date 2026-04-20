@@ -13,17 +13,21 @@ sources:
   - tools/2026-03-27-termcraft-build-animated-terminal-uis-with-drag-drop.md
   - ai-agents/2026-04-05-autonomous-ai-sports-article-writer-using-deepseek-and-llm-j.md
   - ai-agents/2026-04-05-persistent-memory-for-ai-coding-agents-via-knowledge-graphs-.md
+  - ai-agents/2026-04-12-hands-on-langgraph-course-for-production-grade-llm-agents.md
+  - ai-agents/2026-04-12-polishing-agent-built-uis-with-curated-skills.md
+  - ai-agents/2026-04-13-graph-based-agent-skill-retrieval-for-llms-graph-of-skills.md
+  - ai-agents/2026-04-15-bridge-claude-managed-agents-with-linear-for-enhanced-team-c.md
 created: 2026-04-05
-modified: 2026-04-07
+modified: 2026-04-20
 ---
 
 # @tom_doerr
 
-The most bookmarked author in the collection (12 bookmarks). Prolific curator and builder in the AI developer tools space — consistently surfaces high-quality open-source projects, Claude Code ecosystem tools, and developer productivity utilities. Acts as a signal filter for the AI coding community.
+The most bookmarked author in the collection (16 bookmarks). He consistently surfaces high-signal projects across agent memory, orchestration, skills, developer tooling, and terminal-first workflows, making him one of the strongest curation sources in this vault.
 
 ## Bookmarked Content
 - [[ai-agents/2026-03-25-typescript-sdk-for-model-context-protocol-for-llm-integratio]] — MCP TypeScript SDK
-- [[ai-agents/2026-04-01-agent-lattice-markdown-based-knowledge-graph-for-codebases]] — Agent Lattice (lat.md)
+- [[ai-agents/2026-04-01-agent-lattice-markdown-based-knowledge-graph-for-codebases]] — Agent Lattice (`lat.md`)
 - [[ai-coding/2026-03-26-visual-example-driven-guide-to-mastering-claude-code]] — claude-howto guide
 - [[ai-coding/2026-03-30-ai-generated-architecture-docs-with-oh-my-mermaid-and-claude]] — oh-my-mermaid
 - [[ai-coding/2026-03-30-turbo-modular-dev-process-skills-for-claude-code]] — Turbo modular skills
@@ -34,3 +38,7 @@ The most bookmarked author in the collection (12 bookmarks). Prolific curator an
 - [[tools/2026-03-27-termcraft-build-animated-terminal-uis-with-drag-drop]] — Termcraft terminal UI builder
 - [[ai-agents/2026-04-05-autonomous-ai-sports-article-writer-using-deepseek-and-llm-j]] — SportsWriter DeepSeek + LLM-judge pipeline
 - [[ai-agents/2026-04-05-persistent-memory-for-ai-coding-agents-via-knowledge-graphs-]] — agentmemory persistent memory framework
+- [[ai-agents/2026-04-12-hands-on-langgraph-course-for-production-grade-llm-agents]] — LangGraph course for production-grade agents
+- [[ai-agents/2026-04-12-polishing-agent-built-uis-with-curated-skills]] — UI polish skills for agent-built products
+- [[ai-agents/2026-04-13-graph-based-agent-skill-retrieval-for-llms-graph-of-skills]] — dependency-aware skill retrieval for agents
+- [[ai-agents/2026-04-15-bridge-claude-managed-agents-with-linear-for-enhanced-team-c]] — Claude Managed Agents integrated into team workflows

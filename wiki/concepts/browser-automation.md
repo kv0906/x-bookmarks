@@ -6,31 +6,35 @@ sources:
   - tools/2026-03-28-cli-agents-and-carbonyl-a-terminal-based-chromium-browser.md
   - ai-agents/2026-04-06-agent-browser-chat-ai-agent-web-automation.md
   - ai-agents/2026-04-10-cloudflare-browser-rendering-cdp-for-remote-browser-automati.md
+  - ai-agents/2026-04-12-vercel-s-agent-browser-cli-for-ai-powered-web-automation.md
+  - ai-agents/2026-04-12-chrome-devtools-mcp-enhancements-for-ai-agents.md
 created: 2026-04-05
-modified: 2026-04-12
+modified: 2026-04-20
 ---
 
 # Browser Automation
 
-Tools and standards for AI agents to interact with the web — from controlling real Chrome instances to running full Chromium in the terminal. Two distinct approaches: GUI-based browser control and terminal-based headless browsing.
+Tools and standards for AI agents to interact with the web, from controlling real Chrome instances to running compact terminal browsers and quality-checking sites through browser-native MCP servers. The category is widening from "click buttons" into a broader browser operations layer.
 
 ## Key Points
-- **dev-browser** CLI lets agents control your real Chrome instance (not sandboxed) via Playwright API and Chrome remote debugging — agents see what you see
-- **WebMCP** is Google's proposed web standard allowing websites to expose structured tools/capabilities to AI agents via Declarative and Imperative APIs
-- **Carbonyl** runs Chromium entirely in the terminal with ASCII art rendering — 0% idle CPU, 60fps, WebGL/WebGPU support, sub-second startup
-- **Carbonyl + tmux** pattern enables AI agents to browse the web without GUI overhead, useful for CLI-native agent workflows
-- The field is splitting between "give agents a real browser" (dev-browser) and "give agents a lightweight browser" (Carbonyl) approaches
-- **agent-browser** (Vercel Labs) uses a Rust CLI + Node.js daemon managing Playwright, and its **Snapshot + Refs** system gives agents a compact accessibility tree instead of raw DOM — up to 93% token reduction. The new `agent-browser chat` mode adds one-shot commands, interactive chat, and sub-agent usage; compatible with Claude Code, Cursor, Codex, Gemini
-- **Cloudflare Browser Rendering** now exposes Chrome DevTools Protocol (CDP) via WebSocket — any CDP-compatible client or [[mcp]] client can control remote headless Chrome at the edge for navigation, screenshots, performance audits, and JavaScript debugging without local browser infrastructure
+- **dev-browser** lets agents control your real Chrome instance through Playwright APIs and remote debugging
+- **WebMCP** proposes a browser-native way for sites to expose structured tools and capabilities directly to agents
+- **Carbonyl** runs Chromium in the terminal with ASCII rendering, giving CLI agents a lightweight browsing option
+- **agent-browser** (Vercel Labs) uses Snapshot + Refs to give agents an accessibility-tree view instead of raw DOM, cutting token usage dramatically
+- **agent-browser skills at runtime** keep automation instructions fresh instead of shipping stale embedded skill content with the CLI
+- **Cloudflare Browser Rendering** exposes Chrome DevTools Protocol over WebSocket, so MCP clients and CDP clients can drive headless Chrome at the edge
+- **Chrome DevTools MCP** turns browser automation into browser quality engineering: Lighthouse, memory leak inspection, accessibility debugging, and LCP optimization can all ride through one MCP surface
 
 ## Related
-- [[mcp]] — WebMCP extends MCP concepts to the web
-- [[terminal-tools]] — Carbonyl fits into the terminal tool renaissance
-- [[claude-code]] — agents that need web access benefit from both approaches
+- [[mcp]] — WebMCP and DevTools MCP extend browser automation into protocol territory
+- [[terminal-tools]] — Carbonyl bridges browser and terminal worlds
+- [[claude-code]] — coding agents increasingly need reliable browser access
 
 ## Sources
-- [[tools/2026-03-25-ai-agent-control-real-chrome-with-dev-browser-and-webmcp-con]] — dev-browser and WebMCP standard
-- [[tools/2026-03-25-carbonyl-chromium-browser-in-your-terminal]] — Carbonyl standalone
+- [[tools/2026-03-25-ai-agent-control-real-chrome-with-dev-browser-and-webmcp-con]] — dev-browser and WebMCP
+- [[tools/2026-03-25-carbonyl-chromium-browser-in-your-terminal]] — Carbonyl terminal browser
 - [[tools/2026-03-28-cli-agents-and-carbonyl-a-terminal-based-chromium-browser]] — Carbonyl + tmux for agents
-- [[ai-agents/2026-04-06-agent-browser-chat-ai-agent-web-automation]] — Vercel agent-browser + Snapshot+Refs token-efficient DOM
-- [[ai-agents/2026-04-10-cloudflare-browser-rendering-cdp-for-remote-browser-automati]] — Cloudflare Browser Rendering CDP for edge-hosted headless Chrome
+- [[ai-agents/2026-04-06-agent-browser-chat-ai-agent-web-automation]] — Vercel agent-browser + Snapshot + Refs
+- [[ai-agents/2026-04-10-cloudflare-browser-rendering-cdp-for-remote-browser-automati]] — edge-hosted headless Chrome via CDP
+- [[ai-agents/2026-04-12-vercel-s-agent-browser-cli-for-ai-powered-web-automation]] — runtime-served skills for `agent-browser`
+- [[ai-agents/2026-04-12-chrome-devtools-mcp-enhancements-for-ai-agents]] — DevTools MCP for Lighthouse, accessibility, memory, and performance workflows

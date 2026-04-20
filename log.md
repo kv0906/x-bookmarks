@@ -114,3 +114,13 @@
 - Removed crypto section from _topic-map.yml
 - Cleaned wiki-exclusions.yml (removed 3 entries for trashed crypto/defi files)
 - Remaining folders: ai-agents, ai-coding, ai-media, ai-research, tools, web-dev, creative, security
+
+## [2026-04-20] compile | Incremental update for 26 uncompiled bookmarks
+- Processed 26 bookmarks across ai-agents, ai-coding, tools, web-dev, and creative folders
+- Quality gate: all 26 pass — substantive tools, architecture, and workflow content; no quarantines
+- Created 3 concept pages: `openai-codex`, `cloudflare-sandboxes`, `cloudflare-mesh`
+- Updated 10 existing concept pages: `agent-orchestration`, `ai-agent-memory`, `browser-automation`, `agent-skills`, `dynamic-knowledge-systems`, `design-md`, `fireworks-tech-graph`, `llm-wiki`, `mcp`, `terminal-tools`
+- Created 4 author pages: `ctatedev`, `addyosmani`, `mem0ai`, `vercel_dev`
+- Updated existing author and synthesis pages, and repaired stale source paths left by the 2026-04-15 organize/purge pass
+- Updated `wiki/INDEX.md` to 31 concepts, 3 comparisons, 12 authors, 5 synthesis articles
+- Attempted qmd refresh, but local `qmd` is currently blocked by a Node ABI mismatch in `better-sqlite3`; wiki content compiled successfully, search index refresh still pending environment repair

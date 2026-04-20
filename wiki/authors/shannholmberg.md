@@ -1,16 +1,16 @@
 ---
 type: author
 sources:
-  - misc/2026-03-30-decentralized-ai-agents-and-web3-iexec-s-confidential-comput.md
-  - misc/2026-04-06-leveraging-llm-powered-knowledge-bases-for-ai-marketers.md
+  - ai-coding/2026-04-06-leveraging-llm-powered-knowledge-bases-for-ai-marketers.md
+  - ai-agents/2026-04-12-ronin-ai-content-engine-with-markdown-files-for-social-media.md
 created: 2026-04-07
-modified: 2026-04-07
+modified: 2026-04-20
 ---
 
 # @shannholmberg
 
-Marketer and Web3/AI commentator (Lunar Strategy). Bookmarks span decentralized-AI infrastructure and practical applications of [[llm-wiki]] to marketing workflows — a bridge between AI-agent tooling and go-to-market practice.
+AI operator focused on putting markdown-first systems into real marketing and publishing workflows. The bookmarks bridge personal knowledge bases and autonomous content operations.
 
 ## Bookmarked Content
-- [[misc/2026-03-30-decentralized-ai-agents-and-web3-iexec-s-confidential-comput]] — iExec confidential computing for AI agents
-- [[misc/2026-04-06-leveraging-llm-powered-knowledge-bases-for-ai-marketers]] — Karpathy LLM KB applied to marketer swipe files
+- [[ai-coding/2026-04-06-leveraging-llm-powered-knowledge-bases-for-ai-marketers]] — Karpathy-style LLM Wiki applied to marketer swipe files
+- [[ai-agents/2026-04-12-ronin-ai-content-engine-with-markdown-files-for-social-media]] — Ronin's 17-markdown-file operating system for autonomous social publishing
