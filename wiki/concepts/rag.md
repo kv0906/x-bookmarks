@@ -7,8 +7,9 @@ sources:
   - ai-research/2026-04-12-chunking-first-principles.md
   - ai-research/2026-04-12-cosine-similarity-first-principles.md
   - ai-research/2026-04-12-llm-foundations-first-principles.md
+  - ai-agents/2026-04-20-retrievers-dense-sparse-hybrid-first-principles.md
 created: 2026-04-12
-modified: 2026-04-15
+modified: 2026-04-20
 ---
 
 # RAG (Retrieval-Augmented Generation)
@@ -21,6 +22,7 @@ RAG lets an LLM consult external documents before answering, bridging the gap be
 - **Embedding models** convert text into high-dimensional vectors where semantic similarity maps to geometric proximity — choosing the right embedding model is a key quality lever
 - **Vector databases** (Pinecone, Weaviate, Chroma) store these embeddings and enable sub-second similarity search at scale, replacing traditional keyword-based retrieval
 - **Cosine similarity** is the dominant distance metric: it measures the angle between two vectors (0–1 scale), ignoring magnitude — fast and effective for text
+- **Retriever strategy** now commonly mixes dense, sparse, and hybrid approaches before reranking: dense for semantic recall, sparse for exact lexical hits, hybrid for reliability in mixed natural-language + identifier-heavy queries
 - **Trade-offs for PMs**: RAG adds latency (retrieval step) and cost (vector DB infrastructure) but is the most proven technique for reducing hallucination in production AI products
 - RAG is the predecessor to [[context-engineering]] — a fixed, one-shot retrieval pipeline that evolved into agentic multi-source context assembly
 
@@ -46,3 +48,4 @@ User Query → Embed → Vector Search → Top-K Chunks → Prompt + LLM → Ans
 - [[ai-research/2026-04-12-chunking-first-principles]] — document splitting strategies and size trade-offs
 - [[ai-research/2026-04-12-cosine-similarity-first-principles]] — angle-based distance metric for vector matching
 - [[ai-research/2026-04-12-llm-foundations-first-principles]] — RAG mentioned as key technique to counter hallucination
+- [[ai-agents/2026-04-20-retrievers-dense-sparse-hybrid-first-principles]] — retriever-stage design tradeoffs and practical dense/sparse/hybrid split

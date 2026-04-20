@@ -5,8 +5,9 @@ sources:
   - ai-research/2026-04-12-llm-foundations-first-principles.md
   - ai-research/2026-04-12-math-concepts-for-llms-generalist.md
   - ai-research/2026-04-12-vector-database-first-principles.md
+  - ai-agents/2026-04-20-retrievers-dense-sparse-hybrid-first-principles.md
 created: 2026-04-12
-modified: 2026-04-12
+modified: 2026-04-20
 ---
 
 # Embedding
@@ -19,6 +20,7 @@ Embeddings are the bridge between human language and machine computation: a lear
 - **Embedding model choice matters**: stronger embedding models produce more accurate vector representations → better retrieval quality → better RAG answers. This is one of the highest-leverage decisions in a RAG system
 - **Dimensionality**: typical embedding vectors are 384–1536 dimensions. Higher dimensions capture more nuance but consume more storage and compute
 - **PM trade-off**: embedding quality directly drives product quality in search and retrieval features, but stronger models cost more compute and storage per document
+- **Retriever context**: dense retrieval quality depends on embeddings, while exact-match behavior still often requires separate lexical/hybrid retrieval layers
 
 ## Related
 - [[rag]] — embeddings are the foundation of the RAG retrieval pipeline
@@ -30,3 +32,4 @@ Embeddings are the bridge between human language and machine computation: a lear
 - [[ai-research/2026-04-12-llm-foundations-first-principles]] — embedding as the first Transformer step
 - [[ai-research/2026-04-12-math-concepts-for-llms-generalist]] — vectors and matrices as the mathematical foundation
 - [[ai-research/2026-04-12-vector-database-first-principles]] — embeddings stored in VectorDB for similarity search
+- [[ai-agents/2026-04-20-retrievers-dense-sparse-hybrid-first-principles]] — dense retrieval tradeoffs in practical RAG pipelines

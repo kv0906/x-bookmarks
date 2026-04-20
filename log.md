@@ -133,3 +133,11 @@
 - Updated 1 synthesis article: `agent-infrastructure-stack`
 - Updated `wiki/INDEX.md` (no new entries; existing index links validated)
 - Refreshed `qmd` index and embeddings successfully
+
+## [2026-04-20] compile | Retriever primer integration
+- Processed 1 bookmark from `ai-agents` (Retriever Deep Dive: Dense, Sparse, Hybrid)
+- Quality gate: pass — substantial retrieval architecture content
+- Created 1 concept page: `retrieval`
+- Updated 2 existing concept pages: `rag`, `embedding`
+- Updated `wiki/INDEX.md` with new `[[concepts/retrieval]]` entry
+- Refreshed `qmd` index and embeddings successfully
