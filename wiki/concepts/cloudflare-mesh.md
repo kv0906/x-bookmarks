@@ -16,6 +16,7 @@ Cloudflare's private-network layer for connecting devices, servers, agents, Work
 - **Workers VPC** extends that idea to Cloudflare runtimes, so Workers, Agents, and Durable Objects can access internal resources directly
 - Mesh fills a missing layer in the stack: secure reachability between model-facing systems and the private tools/data they need
 - Particularly relevant for production agent systems where sensitive resources cannot simply be opened to the public internet
+- Private networking also matters for multimodal systems once voice and browser layers begin writing to internal CRMs, ticket tools, and analytics backends
 
 ## Related
 - [[cloudflare-sandboxes]] — private networking becomes more useful once agents have durable compute
@@ -25,3 +26,4 @@ Cloudflare's private-network layer for connecting devices, servers, agents, Work
 ## Sources
 - [[web-dev/2026-04-14-cloudflare-mesh-for-secure-private-network-access]] — personal-device and remote-access framing
 - [[web-dev/2026-04-14-cloudflare-mesh-workers-vpc-for-private-networking]] — Mesh + Workers VPC for private MCPs, APIs, and databases
+- [[ai-agents/2026-04-20-cloudflare-agents-week-in-plain-english]] — private networking context for production-grade multimodal and voice-enabled agents

@@ -8,6 +8,7 @@ sources:
   - ai-agents/2026-04-05-persistent-memory-for-ai-coding-agents-via-knowledge-graphs-.md
   - ai-agents/2026-04-11-mem0-ai-open-source-weekly-updates-universal-memory-layer-pr.md
   - ai-agents/2026-04-12-the-crucial-role-of-memory-in-ai-agent-intelligence.md
+  - ai-agents/2026-04-20-cloudflare-agents-week-in-plain-english.md
 created: 2026-04-05
 modified: 2026-04-20
 ---
@@ -23,6 +24,7 @@ How AI agents persist, retrieve, and evolve knowledge across conversations. Memo
 - **Self-evolving knowledge systems** promote hypotheses into rules over time, separating observation from validated memory
 - **agentmemory** tackles the amnesia problem with BM25 + vector + knowledge graph retrieval, provenance tracking, and staleness handling
 - **Memory is the harness**: the Addy Osmani/Harrison Chase framing makes memory responsible for context compaction, skill surfacing, working directories, and the choice of what deserves to persist
+- **Cloudflare's private beta** points to standardized memory commands (`save`, `recall`, `forget`) as managed operations instead of framework-specific ad hoc APIs
 - The design principle that keeps recurring: memory should be an index of useful pointers, not a dump of everything the agent has ever seen
 
 ## Related
@@ -39,3 +41,4 @@ How AI agents persist, retrieve, and evolve knowledge across conversations. Memo
 - [[ai-agents/2026-04-05-persistent-memory-for-ai-coding-agents-via-knowledge-graphs-]] — agentmemory hybrid retrieval framework
 - [[ai-agents/2026-04-11-mem0-ai-open-source-weekly-updates-universal-memory-layer-pr]] — Mem0's weekly product progress and ecosystem momentum
 - [[ai-agents/2026-04-12-the-crucial-role-of-memory-in-ai-agent-intelligence]] — memory as the harness layer that makes agents smarter over time
+- [[ai-agents/2026-04-20-cloudflare-agents-week-in-plain-english]] — Cloudflare's managed memory command model as a platform primitive

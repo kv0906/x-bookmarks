@@ -124,3 +124,12 @@
 - Updated existing author and synthesis pages, and repaired stale source paths left by the 2026-04-15 organize/purge pass
 - Updated `wiki/INDEX.md` to 31 concepts, 3 comparisons, 12 authors, 5 synthesis articles
 - Attempted qmd refresh, but local `qmd` is currently blocked by a Node ABI mismatch in `better-sqlite3`; wiki content compiled successfully, search index refresh still pending environment repair
+
+## [2026-04-20] compile | Incremental update for latest bookmark
+- Processed 1 bookmark from `ai-agents` (Cloudflare Agents Week in Plain English)
+- Quality gate: pass — substantial product architecture and workflow detail
+- Created 0 concept pages
+- Updated 7 existing concept pages: `agent-orchestration`, `ai-agent-memory`, `browser-automation`, `cloudflare-dynamic-workers`, `cloudflare-mesh`, `cloudflare-sandboxes`, `mcp`
+- Updated 1 synthesis article: `agent-infrastructure-stack`
+- Updated `wiki/INDEX.md` (no new entries; existing index links validated)
+- Refreshed `qmd` index and embeddings successfully

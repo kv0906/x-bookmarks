@@ -8,6 +8,7 @@ sources:
   - ai-agents/2026-04-10-cloudflare-browser-rendering-cdp-for-remote-browser-automati.md
   - ai-agents/2026-04-12-vercel-s-agent-browser-cli-for-ai-powered-web-automation.md
   - ai-agents/2026-04-12-chrome-devtools-mcp-enhancements-for-ai-agents.md
+  - ai-agents/2026-04-20-cloudflare-agents-week-in-plain-english.md
 created: 2026-04-05
 modified: 2026-04-20
 ---
@@ -23,6 +24,7 @@ Tools and standards for AI agents to interact with the web, from controlling rea
 - **agent-browser** (Vercel Labs) uses Snapshot + Refs to give agents an accessibility-tree view instead of raw DOM, cutting token usage dramatically
 - **agent-browser skills at runtime** keep automation instructions fresh instead of shipping stale embedded skill content with the CLI
 - **Cloudflare Browser Rendering** exposes Chrome DevTools Protocol over WebSocket, so MCP clients and CDP clients can drive headless Chrome at the edge
+- **Browser Run rebrand** introduced stronger operability knobs (higher concurrency, session recordings, and live view), which make production web automation much more robust under login/CAPTCHA friction
 - **Chrome DevTools MCP** turns browser automation into browser quality engineering: Lighthouse, memory leak inspection, accessibility debugging, and LCP optimization can all ride through one MCP surface
 
 ## Related
@@ -38,3 +40,4 @@ Tools and standards for AI agents to interact with the web, from controlling rea
 - [[ai-agents/2026-04-10-cloudflare-browser-rendering-cdp-for-remote-browser-automati]] — edge-hosted headless Chrome via CDP
 - [[ai-agents/2026-04-12-vercel-s-agent-browser-cli-for-ai-powered-web-automation]] — runtime-served skills for `agent-browser`
 - [[ai-agents/2026-04-12-chrome-devtools-mcp-enhancements-for-ai-agents]] — DevTools MCP for Lighthouse, accessibility, memory, and performance workflows
+- [[ai-agents/2026-04-20-cloudflare-agents-week-in-plain-english]] — Cloudflare Browser Run rebrand and Human-in-the-Loop operational guidance

@@ -3,6 +3,7 @@ type: concept
 sources:
   - ai-agents/2026-04-13-cloudflare-sandboxes-ga-secure-computing-for-ai-agents.md
   - ai-agents/2026-04-13-cloudflare-sandboxes-persistent-environments-for-ai-agents.md
+  - ai-agents/2026-04-20-cloudflare-agents-week-in-plain-english.md
 created: 2026-04-20
 modified: 2026-04-20
 ---
@@ -16,6 +17,7 @@ Cloudflare's durable compute environment for AI agents: isolated workspaces with
 - **Isolation model** gives Cloudflare a secure place for AI-generated or untrusted code to execute with machine-like context
 - **Human-like engineering loop** becomes possible inside Cloudflare's stack: clone, run, inspect, fix, repeat
 - Sandboxes close an important gap in the platform: Cloudflare now has both fast stateless isolates and durable stateful compute for agents
+- GA status turns Sandboxes from developer preview to production-ready for durable multi-step agent workflows
 
 ## Related
 - [[cloudflare-dynamic-workers]] — Cloudflare's fast stateless execution layer
@@ -25,3 +27,4 @@ Cloudflare's durable compute environment for AI agents: isolated workspaces with
 ## Sources
 - [[ai-agents/2026-04-13-cloudflare-sandboxes-ga-secure-computing-for-ai-agents]] — GA announcement and secure-agent-compute positioning
 - [[ai-agents/2026-04-13-cloudflare-sandboxes-persistent-environments-for-ai-agents]] — persistent environment details and engineering-loop framing
+- [[ai-agents/2026-04-20-cloudflare-agents-week-in-plain-english]] — practical production framing for stateful agent workflows and where to choose Sandboxes over Dynamic Workers

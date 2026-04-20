@@ -8,6 +8,7 @@ sources:
   - tools/2026-03-25-ai-agent-control-real-chrome-with-dev-browser-and-webmcp-con.md
   - ai-agents/2026-04-10-cloudflare-browser-rendering-cdp-for-remote-browser-automati.md
   - ai-agents/2026-04-12-chrome-devtools-mcp-enhancements-for-ai-agents.md
+  - ai-agents/2026-04-20-cloudflare-agents-week-in-plain-english.md
 created: 2026-04-05
 modified: 2026-04-20
 ---
@@ -24,6 +25,7 @@ Anthropic's open protocol for connecting LLMs to external tools and data sources
 - **WebMCP** extends the idea toward the browser itself exposing structured capabilities
 - **Cloudflare Browser Rendering** and **Chrome DevTools MCP** show the next step: MCP servers can encapsulate rich operational workflows such as audits, performance debugging, screenshots, and browser control
 - MCP is evolving from a tool-calling format into a broader agent infrastructure layer
+- **Agent SDK platforms are converging on protocol-first tooling**, with Cloudflare presenting MCP plus higher-level runtime features as a layered architecture
 
 ## Related
 - [[claude-code]] — primary MCP client
@@ -39,3 +41,4 @@ Anthropic's open protocol for connecting LLMs to external tools and data sources
 - [[tools/2026-03-25-ai-agent-control-real-chrome-with-dev-browser-and-webmcp-con]] — WebMCP web standard
 - [[ai-agents/2026-04-10-cloudflare-browser-rendering-cdp-for-remote-browser-automati]] — Browser Rendering CDP + MCP integration
 - [[ai-agents/2026-04-12-chrome-devtools-mcp-enhancements-for-ai-agents]] — DevTools MCP for Lighthouse, accessibility, memory, and performance workflows
+- [[ai-agents/2026-04-20-cloudflare-agents-week-in-plain-english]] — practical layer-level map: MCP + protocol clients + runtime execution

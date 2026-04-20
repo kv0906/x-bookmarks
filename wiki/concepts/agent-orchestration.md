@@ -12,6 +12,7 @@ sources:
   - ai-agents/2026-04-11-building-claude-managed-agents-on-vercel-with-secure-integra.md
   - ai-agents/2026-04-12-hands-on-langgraph-course-for-production-grade-llm-agents.md
   - ai-agents/2026-04-15-bridge-claude-managed-agents-with-linear-for-enhanced-team-c.md
+  - ai-agents/2026-04-20-cloudflare-agents-week-in-plain-english.md
 created: 2026-04-05
 modified: 2026-04-20
 ---
@@ -32,6 +33,7 @@ Patterns and frameworks for running AI agents reliably at scale, covering harnes
 - **9-layer production architecture** adds concrete structure: services, agents, prompts, security, evaluation, observability, and agent context files as separate concerns
 - **LangGraph** is emerging as the practical orchestration runtime many builders learn first: graph-based control flow, Agentic RAG, ReAct, and reflection workflows are now taught as production patterns
 - **Managed agents are moving into team systems**: Claude Managed Agents on Vercel and Linear-style integrations turn orchestration into shared operational infrastructure instead of a solo coding workflow
+- **Cloudflare's Agents SDK/Fibers** shifts production concerns by making stepwise durable execution, retries, and recovery first-class primitives inside the same framework rather than external workflow glue
 
 ## Related
 - [[ai-agent-memory]] — memory enables stateful orchestration
@@ -52,3 +54,4 @@ Patterns and frameworks for running AI agents reliably at scale, covering harnes
 - [[ai-agents/2026-04-11-building-claude-managed-agents-on-vercel-with-secure-integra]] — Claude Managed Agents on Vercel with Vaults and Workflow SDK
 - [[ai-agents/2026-04-12-hands-on-langgraph-course-for-production-grade-llm-agents]] — LangGraph as a hands-on orchestration framework
 - [[ai-agents/2026-04-15-bridge-claude-managed-agents-with-linear-for-enhanced-team-c]] — managed agents plugged into team workflows via Linear
+- [[ai-agents/2026-04-20-cloudflare-agents-week-in-plain-english]] — durable state and multi-step recovery patterns with Fibers and Think in the Agents SDK

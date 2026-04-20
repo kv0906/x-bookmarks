@@ -14,6 +14,7 @@ sources:
   - ai-agents/2026-04-11-building-claude-managed-agents-on-vercel-with-secure-integra.md
   - ai-agents/2026-04-13-cloudflare-sandboxes-ga-secure-computing-for-ai-agents.md
   - web-dev/2026-04-14-cloudflare-mesh-workers-vpc-for-private-networking.md
+  - ai-agents/2026-04-20-cloudflare-agents-week-in-plain-english.md
 created: 2026-04-05
 modified: 2026-04-20
 ---
@@ -55,6 +56,9 @@ This is a healthier shape than the earlier "fast vs durable" binary. Vendors are
 - **Cloudflare Mesh + Workers VPC** add a private-network plane for agents, Workers, and Durable Objects
 - **Claude Managed Agents on Vercel** keep pushing the "managed runtime for teams" direction
 - **Browser Rendering + DevTools MCP** show protocol and I/O layers blending together
+- **Agent SDK + Fibers** adds practical durability to orchestration, especially for multi-step execution that can crash or span turns
+- **Cloudflare Voice** lowers multimodal barrier with a unified path for voice + text interactions
+- **Cloudflare AI Gateway + Memory** tighten operations by consolidating model access and context state into managed blocks
 
 ## What’s Still Missing
 
