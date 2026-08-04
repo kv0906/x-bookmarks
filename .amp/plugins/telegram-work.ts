@@ -278,19 +278,6 @@ export class TelegramBridge {
 			let thread: BridgeThread
 			if (route) {
 				thread = this.dependencies.getThread(route.child_amp_thread_id as `T-${string}`)
-				if (await thread.state.get() === 'error') {
-					this.db.transaction(() => {
-						this.db.query("UPDATE chat_routes SET status = 'failed' WHERE telegram_chat_id = ?").run(message.chatID)
-						fencedUpdate(this.db, event.id, claimToken, 'routed')
-					})()
-					await this.dependencies.sendTelegram(
-						message.chatID,
-						'The current Amp thread is unavailable. Send /new to explicitly start a replacement thread.',
-						ctx.signal,
-					)
-					fencedUpdate(this.db, event.id, claimToken, 'complete')
-					return
-				}
 			} else {
 				thread = await this.dependencies.createThread()
 				const now = new Date().toISOString()

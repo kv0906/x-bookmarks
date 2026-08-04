@@ -105,10 +105,13 @@ describe('TelegramBridge', () => {
 
 	test('later message routes to the existing child thread', async () => {
 		await bridge.handle(webhookEvent('event-1', telegramBody(1)), { signal })
+		const thread = threads.get('T-test-1')
+		if (!thread) throw new Error('missing fake thread')
+		thread.state.get = async () => { throw new Error('thread.state is not supported in this environment') }
 		await bridge.handle(webhookEvent('event-2', telegramBody(2, 101, 101, 'Fix it and test it')), { signal })
 
 		expect(createCount).toBe(1)
-		expect(threads.get('T-test-1')?.prompts).toHaveLength(2)
+		expect(thread.prompts).toHaveLength(2)
 		expect(acknowledgements[1]?.text).toBe('Sent to the current Amp thread.')
 	})
 
