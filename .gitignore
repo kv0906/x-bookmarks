@@ -9,3 +9,6 @@
 .obsidian/themes/
 .trash/
 quartz/
+
+# Amp plugin runtime state
+.amp/state/
