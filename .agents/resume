@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "Checking orb prerequisites..."
+command -v qmd >/dev/null
+qmd collection show xbm >/dev/null
+echo "Orb resume checks complete."
